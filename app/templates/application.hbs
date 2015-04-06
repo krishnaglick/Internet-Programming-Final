@@ -1,10 +1,13 @@
 {{document-title title=appName}} {{document-title title=appTitle}}
 
-<div class="ui centered grid" style="width: 800px;">
+<div class="ui centered grid" style="width: 100%;">
 	<div class="eight wide column">
 		<form class="ui form">
 			<div class="field">
-				<h2 class="ui header"><i class="marker icon"></i>{{appName}}</h2>
+				<h2 class="ui dark blue header">
+					<i class="ui dark blue circular marker icon"></i>
+					{{appName}}
+				</h2>
 			</div>
 
 			<div class="field">
@@ -26,16 +29,20 @@
 			</div>
 
 			<div class="field">
-				{{textarea value=data.comment style=noResize placeholder="Talk about it!" type="text"}}
+				{{textarea value=data.comment style='resize: none;' placeholder="Talk about it!" type="text"}}
 			</div>
 
 			<div class="field">
-				<span class="hidden">
-					{{input type="file" id="uploadAnImage" isVisible=false value=data.image accept="image/*"}}
-				</span>
-		        <div class="ui compact inverted blue button" {{bind-attr class=data.image.files.length:disabled}} onclick="$('#uploadAnImage').click();">
-		            Select Image
-		        </div>
+				{{input type="file" id="uploadAnImage" isVisible=false value=data.image accept="image/*"}}
+				{{#if imageSelected}}
+			        <div class="ui compact inverted green button" {{action 'clearImage'}}>
+			            Clear Image
+			        </div>
+		        {{else}}
+			        <div class="ui compact inverted blue button" {{action 'selectImage'}}>
+			            Select Image
+			        </div>
+		        {{/if}}
 		        <div class="ui compact inverted blue button" {{action 'uploadImage'}}>
 		            Upload Image
 		        </div>

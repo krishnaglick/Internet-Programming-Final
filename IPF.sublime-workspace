@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"uplo",
+				"uploadAnImage"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
 				"image",
 				"imageUploader"
 			],
@@ -331,7 +339,7 @@
 			"file": "app/templates/application.hbs",
 			"settings":
 			{
-				"buffer_size": 1354,
+				"buffer_size": 1496,
 				"line_ending": "Unix"
 			}
 		},
@@ -339,7 +347,7 @@
 			"file": "app/router.js",
 			"settings":
 			{
-				"buffer_size": 186,
+				"buffer_size": 271,
 				"line_ending": "Unix"
 			}
 		},
@@ -347,7 +355,7 @@
 			"file": "app/services/image-uploader.js",
 			"settings":
 			{
-				"buffer_size": 380,
+				"buffer_size": 755,
 				"line_ending": "Unix"
 			}
 		},
@@ -355,25 +363,9 @@
 			"file": "app/controllers/application.js",
 			"settings":
 			{
-				"buffer_size": 308,
+				"buffer_size": 582,
 				"line_ending": "Windows",
 				"name": "export default Ember.Controller.extend({"
-			}
-		},
-		{
-			"file": "config/environment.js",
-			"settings":
-			{
-				"buffer_size": 1720,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/internet-programming-final.css",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -465,12 +457,16 @@
 		"/D/Node/Internet-Programming-Final/app",
 		"/D/Node/Internet-Programming-Final/app/assets",
 		"/D/Node/Internet-Programming-Final/app/controllers",
+		"/D/Node/Internet-Programming-Final/app/models",
 		"/D/Node/Internet-Programming-Final/app/routes",
 		"/D/Node/Internet-Programming-Final/app/services",
 		"/D/Node/Internet-Programming-Final/app/templates"
 	],
 	"file_history":
 	[
+		"/D/Node/Internet-Programming-Final/app/assets/internet-programming-final.css",
+		"/D/Node/Internet-Programming-Final/config/environment.js",
+		"/D/Node/Internet-Programming-Final/package.json",
 		"/D/Node/Internet-Programming-Final/app/utilities/image-converter.js",
 		"/D/Node/Internet-Programming-Final/app/templates/application.hbs",
 		"/D/Node/Internet-Programming-Final/app/app.js",
@@ -538,6 +534,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\"'*'\"",
 			"contentSecurityPolicyHeader ",
 			"debugger",
 			"this.restaurantName",
@@ -658,6 +655,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"'self' *\"",
 			"th",
 			"clear",
 			"",
@@ -714,7 +712,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -742,7 +740,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -781,15 +779,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1354,
+						"buffer_size": 1496,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1099,
-								1099
+								1093,
+								1093
 							]
 						],
 						"settings":
@@ -797,10 +795,10 @@
 							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -809,15 +807,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 186,
+						"buffer_size": 271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								137
+								222,
+								222
 							]
 						],
 						"settings":
@@ -828,7 +826,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -837,15 +835,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 380,
+						"buffer_size": 755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								345,
-								345
+								704,
+								704
 							]
 						],
 						"settings":
@@ -853,16 +851,16 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -871,15 +869,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 308,
+						"buffer_size": 582,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								191,
-								191
+								550,
+								550
 							]
 						],
 						"settings":
@@ -892,65 +890,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "config/environment.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1720,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								230,
-								230
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/assets/internet-programming-final.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1006,7 +946,7 @@
 	"project": "IPF.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
