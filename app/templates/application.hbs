@@ -12,29 +12,29 @@
 
 			<div class="field">
 				<div class="ui input">
-					{{input value=data.friendsEmail placeholder="Friend's Email" type="text"}}
+					{{input value=friendsEmail placeholder="Friend's Email" type="text"}}
 				</div>
 			</div>
 
 			<div class="field">
 				<div class="ui input">
-					{{input value=data.myEmail placeholder="My Email" type="text"}}
+					{{input value=myEmail placeholder="My Email" type="text"}}
 				</div>
 			</div>
 
 			<div class="field">
 				<div class="ui input">
-					{{input value=data.address placeholder="Where Am I?" type="text"}}
+					{{input value=address placeholder="Where Am I?" type="text"}}
 				</div>
 			</div>
 
 			<div class="field">
-				{{textarea value=data.comment style='resize: none;' placeholder="Talk about it!" type="text"}}
+				{{textarea value=comment style='resize: none;' placeholder="Talk about it!" type="text"}}
 			</div>
 
 			<div class="field">
-				{{input type="file" id="uploadAnImage" isVisible=false value=data.image accept="image/*"}}
-				{{#if imageSelected}}
+				{{input type="file" id="uploadAnImage" isVisible=false value=image accept="image/*"}}
+				{{#if image}}
 			        <div class="ui compact inverted green button" {{action 'clearImage'}}>
 			            Clear Image
 			        </div>
@@ -46,6 +46,10 @@
 		        <div class="ui compact inverted blue button" {{action 'uploadImage'}}>
 		            Upload Image
 		        </div>
+			</div>
+
+			<div class="ui compact inverted blue button" {{action 'submitPointMe'}}>
+				Point!
 			</div>
 		</form>
 	</div>

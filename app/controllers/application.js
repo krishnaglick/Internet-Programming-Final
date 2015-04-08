@@ -1,19 +1,14 @@
 import Ember from 'ember';
 
 var app = Ember.Controller.extend({
-	imageUploader: Ember.inject.service(),
+	imageUploader: Ember.inject.service('imageUploader'),	
 	appName: 'PointMe',
 	appTitle: 'Home',
-	data: {
-		friendsEmail: '',
-		myEmail: '',
-		address: '',
-		comment: '',
-		image: ''
-	},
-	imageSelected: function() {
-		return this.get('data.image');
-	}.property('data.image'),
+	friendsEmail: '',
+	myEmail: '',
+	address: '',
+	comment: '',
+	image: '',
 	actions: {
 		selectImage: function() {
 			uploadAnImage.click();
@@ -22,7 +17,10 @@ var app = Ember.Controller.extend({
 			this.get('imageUploader').uploadImage(uploadAnImage.files[0]);
 		},
 		clearImage: function() {
-			this.set('data.image', '');
+			this.set('image', '');
+		},
+		submitPointMe: function() {
+			debugger;
 		}
 	}
 });
