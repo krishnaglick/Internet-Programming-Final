@@ -6,12 +6,12 @@ var imageUploader = Ember.Service.extend({
 	availableIn: 'controllers',
 	convertImageToBase64: function(file, callback) {
 	    var reader = new FileReader();
-	    reader.onload = function() { callback(reader) };
+	    reader.onload = function() { callback(reader); };
 	    reader.readAsDataURL(file);
 	},
-	uploadImage: function(image) {
+	uploadImage: function(image, pointMeModel, pointMeController) {
 		this.get('convertImageToBase64')(image, function(base64Image) {
-			$.ajax({
+			Ember.$.ajax({
 				type: 'POST',
 				dataType: 'json',
 				url: 'https://api.imgur.com/3/image',
@@ -22,7 +22,10 @@ var imageUploader = Ember.Service.extend({
 					image: base64Image.result.split(',')[1],
 				}
 			}).success(function(data) {
-				//Do things with data
+				pointMeModel.set('imgurID', data.data.id);
+				pointMeModel.set('imgurDeleteHash', data.data.deletehash);
+			}).complete(function() {
+				pointMeController.set('loading', '');
 			});
 		});
 	}

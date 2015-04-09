@@ -4,23 +4,23 @@ var app = Ember.Controller.extend({
 	imageUploader: Ember.inject.service('imageUploader'),	
 	appName: 'PointMe',
 	appTitle: 'Home',
-	friendsEmail: '',
-	myEmail: '',
-	address: '',
-	comment: '',
-	image: '',
+	haveImage: '',
+	loading: '',
 	actions: {
 		selectImage: function() {
 			uploadAnImage.click();
 		},
 		uploadImage: function() {
-			this.get('imageUploader').uploadImage(uploadAnImage.files[0]);
+			this.set('loading', 'loading');
+			this.get('imageUploader').uploadImage(uploadAnImage.files[0], this.get('model'), this);
 		},
 		clearImage: function() {
-			this.set('image', '');
+			this.set('haveImage', '');
 		},
 		submitPointMe: function() {
 			debugger;
+			//this.get('model').save();
+			//Need to learn me some saving right here.
 		}
 	}
 });

@@ -12,38 +12,38 @@
 
 			<div class="field">
 				<div class="ui input">
-					{{input value=friendsEmail placeholder="Friend's Email" type="text"}}
+					{{input value=model.friendsEmail placeholder="Friend's Email" type="text"}}
 				</div>
 			</div>
 
 			<div class="field">
 				<div class="ui input">
-					{{input value=myEmail placeholder="My Email" type="text"}}
+					{{input value=model.userEmail placeholder="My Email" type="text"}}
 				</div>
 			</div>
 
 			<div class="field">
 				<div class="ui input">
-					{{input value=address placeholder="Where Am I?" type="text"}}
+					{{input value=model.address placeholder="Where Am I?" type="text"}}
 				</div>
 			</div>
 
 			<div class="field">
-				{{textarea value=comment style='resize: none;' placeholder="Talk about it!" type="text"}}
+				{{textarea value=model.comment style='resize: none;' placeholder="Talk about it!" type="text"}}
 			</div>
 
 			<div class="field">
-				{{input type="file" id="uploadAnImage" isVisible=false value=image accept="image/*"}}
-				{{#if image}}
-			        <div class="ui compact inverted green button" {{action 'clearImage'}}>
+				{{input type="file" id="uploadAnImage" isVisible=false value=haveImage accept="image/*"}}
+				{{#if haveImage}}
+			        <div class="ui compact inverted green button {{loading}}" {{action 'clearImage'}}>
 			            Clear Image
 			        </div>
 		        {{else}}
-			        <div class="ui compact inverted blue button" {{action 'selectImage'}}>
+			        <div class="ui compact inverted blue button {{loading}}" {{action 'selectImage'}}>
 			            Select Image
 			        </div>
 		        {{/if}}
-		        <div class="ui compact inverted blue button" {{action 'uploadImage'}}>
+		        <div class="ui compact inverted blue button {{loading}}" {{action 'uploadImage'}}>
 		            Upload Image
 		        </div>
 			</div>
