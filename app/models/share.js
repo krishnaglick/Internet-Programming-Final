@@ -1,6 +1,6 @@
 import DS from "ember-data";
 
- var pointMe = DS.Model.extend({
+ var share = DS.Model.extend({
    friendsEmail: DS.attr("string"),
    userEmail: DS.attr("string"),
    location: DS.attr("string"),
@@ -9,4 +9,4 @@ import DS from "ember-data";
    imgurDeleteHash: DS.attr('string')
 });
 
- export default pointMe;
+ export default share;

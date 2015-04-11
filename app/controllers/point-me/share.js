@@ -1,18 +1,17 @@
 import Ember from 'ember';
 
-var app = Ember.Controller.extend({
-	imageUploader: Ember.inject.service('imageUploader'),	
-	appName: 'PointMe',
+var shareController = Ember.Controller.extend({
+	imageUploader: Ember.inject.service('imageUploader'),
 	appTitle: 'Home',
 	haveImage: '',
 	loading: '',
 	actions: {
 		selectImage: function() {
-			uploadAnImage.click();
+			Ember.$('#uploadAnImage').click();
 		},
 		uploadImage: function() {
 			this.set('loading', 'loading');
-			this.get('imageUploader').uploadImage(uploadAnImage.files[0], this.get('model'), this);
+			this.get('imageUploader').uploadImage(Ember.$('#uploadAnImage')[0].files[0], this.get('model'), this);
 		},
 		clearImage: function() {
 			this.set('haveImage', '');
@@ -25,4 +24,4 @@ var app = Ember.Controller.extend({
 	}
 });
 
-export default app;
+export default shareController;
