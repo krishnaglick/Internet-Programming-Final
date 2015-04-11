@@ -1,8 +1,11 @@
 import Base from 'simple-auth/authenticators/base';
 
-export default Base.extend({
+var phpAuth = Base.extend({
     restore: function(data) {
-
+        return new Ember.RSVP.Promise(function(resolve, reject) {
+            resolve(data);
+            reject();
+        });
     },
     authenticate: function(options) {
 
@@ -11,3 +14,5 @@ export default Base.extend({
 
     }
 });
+
+export default phpAuth;
