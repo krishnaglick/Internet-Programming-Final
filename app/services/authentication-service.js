@@ -4,28 +4,28 @@ var authenticationService = Ember.Service.extend({
 	name: 'authenticationService',
 	injectIn: 'routes',
 	availableIn: 'controllers',
-	login: function(model) {
+	login: function(data) {
 		return Ember.$.ajax({
 			type: "POST",
 			dataType: "JSON",
 			contentType: "application/json",
 			url: 'http://cop4813.ccec.unf.edu/~group4/user.php/login',
 			data: JSON.stringify({
-				username: model.get('username'),
-				password: model.get('password')
+				username: data.username,
+				password: data.password
 			})
 		});
 	},
-	register: function(model) {
+	register: function(data) {
 		return Ember.$.ajax({
 			type: "POST",
 			dataType: "JSON",
 			contentType: "application/json",
 			url: 'http://cop4813.ccec.unf.edu/~group4/user.php/register',
 			data: JSON.stringify({
-				username: model.get('username'),
-				password: model.get('password'),
-				email: model.get('email')
+				username: data.username,
+				password: data.password,
+				email: data.email
 			})
 		});
 	}

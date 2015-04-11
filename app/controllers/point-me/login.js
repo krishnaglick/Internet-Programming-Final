@@ -4,17 +4,22 @@ var loginController = Ember.Controller.extend({
 	authenticationService: Ember.inject.service('authenticationService'),
 	appTitle: 'Login',
 	isRegistering: false,
+	data: {
+		username: '',
+		password: '',
+		email: ''
+	},
 	actions: {
         login: function() {
-            this.get('authenticationService').login(this.get('model'), this.get('router'))
+            this.get('authenticationService').login(this.data)
 			.success(function(data) {
 				this.session.set('token', data.token);
-				this.session.isAuthenticated = true;
+				this.session.set('isAuthenticated', true);
 				this.transitionToRoute('point-me.share');
 			}.bind(this));
         },
         register: function() {
-			this.get('authenticationService').register(this.get('model'), this.get('router'))
+			this.get('authenticationService').register(this.data)
 			.success(function(data) {
 				this.session.set('token', data.token);
 				this.session.isAuthenticated = true;

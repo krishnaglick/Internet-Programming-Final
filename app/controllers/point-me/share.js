@@ -24,7 +24,7 @@ var shareController = Ember.Controller.extend({
 					contentType: "application/json",
 					url: 'http://cop4813.ccec.unf.edu/~group4/user.php/register',
 					headers: {
-						token: window.sessionStore.token
+						token: this.session.token
 					},
 					data: JSON.stringify({
 						username: '',

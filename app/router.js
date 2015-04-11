@@ -9,7 +9,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.resource('point-me', {path: '/'}, function() {
+	this.resource('point-me', function() {
 		this.route('login');
 		this.route('share');
 	});
