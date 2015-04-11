@@ -3,7 +3,7 @@ import DataRoute from 'ember-data-route/mixins/data-route';
 
 export default Ember.Route.extend(DataRoute, {
 	beforeModel: function() {
-		if(!('token' in window.sessionStore)) {
+		if(!this.session.isAuthenticated) {
 			this.transitionTo('point-me.login');
 		}
 	},

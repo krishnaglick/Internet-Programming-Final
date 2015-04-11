@@ -4,7 +4,7 @@ var authenticationService = Ember.Service.extend({
 	name: 'authenticationService',
 	injectIn: 'routes',
 	availableIn: 'controllers',
-	login: function(model, router) {
+	login: function(model) {
 		return Ember.$.ajax({
 			type: "POST",
 			dataType: "JSON",
@@ -13,14 +13,10 @@ var authenticationService = Ember.Service.extend({
 			data: JSON.stringify({
 				username: model.get('username'),
 				password: model.get('password')
-			}),
-			success: function(data) {
-				//sessionStore.token = data.token;
-				//router.transitionTo('point-me.share');
-			}
+			})
 		});
 	},
-	register: function(model, router) {
+	register: function(model) {
 		return Ember.$.ajax({
 			type: "POST",
 			dataType: "JSON",
@@ -30,11 +26,7 @@ var authenticationService = Ember.Service.extend({
 				username: model.get('username'),
 				password: model.get('password'),
 				email: model.get('email')
-			}),
-			success: function(data) {
-				//sessionStore.token = data.token;
-				//router.transitionTo('point-me.share');
-			}
+			})
 		});
 	}
 });
