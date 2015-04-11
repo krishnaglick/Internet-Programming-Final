@@ -17,9 +17,26 @@ var shareController = Ember.Controller.extend({
 			this.set('haveImage', '');
 		},
 		submitPointMe: function() {
-			debugger;
-			//this.get('model').save();
-			//Need to learn me some saving right here.
+			if('token' in window.sessionStore) {
+				Ember.$.ajax({
+					type: "POST",
+					dataType: "JSON",
+					contentType: "application/json",
+					url: 'http://cop4813.ccec.unf.edu/~group4/user.php/register',
+					headers: {
+						token: window.sessionStore.token
+					},
+					data: JSON.stringify({
+						username: '',
+						password: '',
+						email: ''
+					}),
+					success: function(data) {
+						window.sessionStore.token = data.token;
+					}
+				});
+			}
+			//Post my model to PHP backend
 		}
 	}
 });

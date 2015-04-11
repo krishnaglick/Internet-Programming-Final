@@ -6,10 +6,17 @@ var loginController = Ember.Controller.extend({
 	isRegistering: false,
 	actions: {
         login: function() {
-            this.get('authenticationService').login(this.get('model'));
+            this.get('authenticationService').login(this.get('model'), this.get('router'))
+			.success(function(data) {
+				debugger;
+				sessionStore.set('token', data);
+			}.bind(this));
         },
         register: function() {
-			this.get('authenticationService').register(this.get('model'));
+			this.get('authenticationService').register(this.get('model'), this.get('router'))
+			.success(function(data) {
+				sessionStore.set('token', data);
+			}.bind(this));
         },
 		createAccount: function() {
 			this.set('isRegistering', true);
