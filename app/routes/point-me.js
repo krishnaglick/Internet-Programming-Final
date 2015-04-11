@@ -3,7 +3,7 @@ import DataRoute from 'ember-data-route/mixins/data-route';
 
 var pointMeRoute = Ember.Route.extend(DataRoute, {
     beforeModel: function() {
-        this.transitionTo('login');
+        this.transitionTo('point-me.login');
     }
 });
 
