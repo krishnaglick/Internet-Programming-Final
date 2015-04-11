@@ -14,6 +14,7 @@ var loginController = Ember.Controller.extend({
             this.get('authenticationService').login(this.data)
 			.success(function(data) {
 				this.session.set('token', data.token);
+				this.session.username = this.data.username;
 				this.session.set('isAuthenticated', true);
 				this.transitionToRoute('point-me.share');
 			}.bind(this));
@@ -22,6 +23,7 @@ var loginController = Ember.Controller.extend({
 			this.get('authenticationService').register(this.data)
 			.success(function(data) {
 				this.session.set('token', data.token);
+				this.session.username = this.data.username;
 				this.session.isAuthenticated = true;
 				this.transitionToRoute('point-me.share');
 			}.bind(this));

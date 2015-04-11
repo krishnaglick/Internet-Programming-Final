@@ -11,7 +11,8 @@
             </div>
             <div class="column">
                 {{#if session.isAuthenticated}}
-                <div class="ui compact inverted green button" {{action 'invalidateSession'}}>
+                <h4 class="ui header" {{value session.username}}></h4>
+                <div class="ui compact inverted green button" {{action 'logout'}}>
                     Logout
                 </div>
                 {{/if}}
