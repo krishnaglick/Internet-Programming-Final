@@ -1,4 +1,30 @@
 {{document-title title=appTitle}}
 <form class="ui form">
-    
+    <div class="field">
+        {{input value=model.username placeholder="Username" type="text"}}
+    </div>
+    <div class="field">
+        {{input value=model.password placeholder="Password" type="password"}}
+    </div>
+    {{#if isRegistering}}
+    <div class="field">
+        {{input value=model.email placeholder="Email" type="text"}}
+    </div>
+    {{/if}}
+
+    {{#if isRegistering}}
+    <div class="ui compact inverted blue button" {{action 'register'}}>
+        Register
+    </div>
+    <div class="ui compact inverted blue button" {{action 'cancelCreateAccount'}}>
+        Cancel
+    </div>
+    {{else}}
+    <div class="ui compact inverted blue button" {{action 'login'}}>
+        Login
+    </div>
+    <div class="ui compact inverted blue button" {{action 'createAccount'}}>
+        Create Account
+    </div>
+    {{/if}}
 </form>
