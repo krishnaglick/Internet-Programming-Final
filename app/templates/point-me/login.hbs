@@ -1,14 +1,14 @@
 {{document-title title=appTitle}}
 <form class="ui form">
     <div class="field">
-        {{input value=model.username placeholder="Username" type="text"}}
+        {{input value=data.username placeholder="Username" type="text"}}
     </div>
     <div class="field">
-        {{input value=model.password placeholder="Password" type="password"}}
+        {{input value=data.password placeholder="Password" type="password"}}
     </div>
     {{#if isRegistering}}
     <div class="field">
-        {{input value=model.email placeholder="Email" type="text"}}
+        {{input value=data.email placeholder="Email" type="text"}}
     </div>
     {{/if}}
 

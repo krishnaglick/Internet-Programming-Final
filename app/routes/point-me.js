@@ -1,8 +1,7 @@
 import Ember from 'ember';
-import DataRoute from 'ember-data-route/mixins/data-route';
+import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
-var pointMeRoute = Ember.Route.extend(DataRoute, {
-    
+var pointMeRoute = Ember.Route.extend(ApplicationRouteMixin, {
 });
 
 export default pointMeRoute;
