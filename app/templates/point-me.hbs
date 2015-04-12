@@ -11,10 +11,14 @@
             </div>
             <div class="column">
                 {{#if session.isAuthenticated}}
-                <h4 class="ui header" {{value session.username}}></h4>
-                <div class="ui compact inverted green button" {{action 'logout'}}>
-                    Logout
-                </div>
+                <span class="ui label">
+                    {{session.username}}
+                    <div class="detail">
+                        <div class="ui compact inverted green button" {{action 'logout'}}>
+                            Logout
+                        </div>
+                    </div>
+                </span>
                 {{/if}}
             </div>
         </div>

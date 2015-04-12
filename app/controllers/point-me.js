@@ -6,7 +6,7 @@ var pointMeController = Ember.Controller.extend({
 		logout: function() {
 			this.session.set('isAuthenticated', false);
 			this.session.username = '';
-			this.transitionToRoute('point-me.login')
+			this.transitionToRoute('point-me.login');
 		}
 	}
 });
