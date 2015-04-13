@@ -5,10 +5,11 @@ var pointMeRoute = Ember.Route.extend(ApplicationRouteMixin, {
 	beforeModel: function() {
 		if(!this.session.isAuthenticated) {
 			this.transitionTo('point-me.login');
-		}
-	},
-	afterModel: function() {
-		Ember.$('.ui.sidebar').sidebar();
+		},
+		Ember.$('#point-me-app .ui.sidebar').sidebar({
+			context: Ember.$('#point-me-app')
+		})
+		.sidebar('attach events', '.ui.sidebar .item');
 	}
 });
 

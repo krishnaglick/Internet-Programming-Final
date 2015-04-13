@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"auth",
+				"authenticationService"
+			],
+			[
 				"point",
 				"pointMeController"
 			],
@@ -328,7 +332,7 @@
 	"buffers":
 	[
 		{
-			"file": "app/services/image-uploader.js",
+			"file": "app/services/image-uploader-service.js",
 			"settings":
 			{
 				"buffer_size": 949,
@@ -336,26 +340,10 @@
 			}
 		},
 		{
-			"file": "app/services/authentication-service.js",
-			"settings":
-			{
-				"buffer_size": 800,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/templates/point-me.hbs",
 			"settings":
 			{
-				"buffer_size": 978,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/point-me/share.js",
-			"settings":
-			{
-				"buffer_size": 1059,
+				"buffer_size": 995,
 				"line_ending": "Windows"
 			}
 		},
@@ -371,7 +359,7 @@
 			"file": "app/routes/point-me.js",
 			"settings":
 			{
-				"buffer_size": 205,
+				"buffer_size": 383,
 				"line_ending": "Windows"
 			}
 		},
@@ -379,15 +367,15 @@
 			"file": "app/controllers/point-me.js",
 			"settings":
 			{
-				"buffer_size": 302,
+				"buffer_size": 459,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/point-me/login.js",
+			"file": "app/controllers/point-me/share.js",
 			"settings":
 			{
-				"buffer_size": 1175,
+				"buffer_size": 1059,
 				"line_ending": "Windows"
 			}
 		},
@@ -498,6 +486,19 @@
 	],
 	"file_history":
 	[
+		"/D/Node/how-to-sane/client/app/models/user.js",
+		"/D/Node/how-to-sane/client/app/pods/components/bootstrap-fileinput/component.js",
+		"/D/Node/how-to-sane/client/app/pods/components/bootstrap-fileinput/template.hbs",
+		"/D/Node/how-to-sane/client/app/pods/register/template.hbs",
+		"/D/Node/how-to-sane/server/api/controllers/UserController.js",
+		"/D/Node/how-to-sane/server/api/controllers/AuthController.js",
+		"/D/Node/how-to-sane/client/app/templates/application.hbs",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/login.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/services/authentication-service.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/share.hbs",
+		"/D/Node/Internet-Programming-Final/app/authenticators/phpAuth.js",
 		"/D/Node/Internet-Programming-Final/app/routes/point-me/login.js",
 		"/D/Node/Internet-Programming-Final/app/templates/point-me/login.hbs",
 		"/D/Node/Internet-Programming-Final/app/app.js",
@@ -565,6 +566,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"D:\\Node\\how-to-sane",
 			"D:\\wamp\\www"
 		]
 	},
@@ -573,6 +575,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"loading",
 			"\"'*'\"",
 			"contentSecurityPolicyHeader ",
 			"debugger",
@@ -751,12 +754,12 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/services/image-uploader.js",
+					"file": "app/services/image-uploader-service.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -767,8 +770,8 @@
 						"selection":
 						[
 							[
-								507,
-								507
+								898,
+								898
 							]
 						],
 						"settings":
@@ -779,53 +782,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/services/authentication-service.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 800,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								440,
-								440
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/templates/point-me.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 978,
+						"buffer_size": 995,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								558,
-								558
+								911,
+								911
 							]
 						],
 						"settings":
@@ -842,36 +816,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/controllers/point-me/share.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1059,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								520,
-								520
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "app/router.js",
 					"semi_transient": false,
 					"settings":
@@ -883,42 +828,8 @@
 						"selection":
 						[
 							[
-								352,
-								352
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "app/routes/point-me.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 205,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								107,
-								107
+								70,
+								70
 							]
 						],
 						"settings":
@@ -931,22 +842,56 @@
 					},
 					"stack_index": 3,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 6,
-					"file": "app/controllers/point-me.js",
+					"buffer": 3,
+					"file": "app/routes/point-me.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 302,
+						"buffer_size": 383,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/point-me.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
 							]
 						],
 						"settings":
@@ -961,20 +906,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "app/controllers/point-me/login.js",
+					"buffer": 5,
+					"file": "app/controllers/point-me/share.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1175,
+						"buffer_size": 1059,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								421,
-								421
+								528,
+								528
 							]
 						],
 						"settings":
@@ -982,15 +927,15 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "app/routes/point-me/share.js",
 					"semi_transient": false,
 					"settings":
@@ -1002,8 +947,8 @@
 						"selection":
 						[
 							[
-								86,
-								86
+								193,
+								193
 							]
 						],
 						"settings":

@@ -1,37 +1,39 @@
-{{document-title title=appName}}
-<div class="ui left vertical inverted labeled icon sidebar menu">
-    <div class="item">
-        <h2 class="ui dark blue header">
-            <i class="ui dark blue circular marker icon"></i>
-            {{appName}}
-        </h2>
-    </div>
-    <div class="item">
-        {{session.username}}
-    </div>
-    {{#if session.isAuthenticated}}
-        <div class="item" {{action 'share'}}>
-            Share
+<section id="point-me-app">
+    {{document-title title=appName}}
+    <section id="sidebar" class="ui left vertical inverted labeled icon sidebar menu">
+        <div class="item">
+            <h2 class="ui dark blue header">
+                <i class="ui dark blue circular marker icon"></i>
+                {{appName}}
+            </h2>
         </div>
+        <div class="item">
+            {{session.username}}
+        </div>
+        {{#if session.isAuthenticated}}
+            <div class="item" {{action 'share'}}>
+                Share
+            </div>
 
-        <div class="item" {{action 'myPoints'}}>
-            See My Points
-        </div>
+            <div class="item" {{action 'myPoints'}}>
+                See My Points
+            </div>
 
-        <div class="item" {{action 'logout'}}>
-            Logout
-        </div>
-    {{/if}}
-</div>
-<section id="point-me-app" class="pusher">
-    <div class="ui centered grid" style="width: 100%;">
-        <div class="row"></div>
-        <div class="row">
-            <div class="eight wide column">
-                <section id="main">
-                    {{outlet}}
-                </section>
+            <div class="item" {{action 'logout'}}>
+                Logout
+            </div>
+        {{/if}}
+    </section>
+    <section id="content" class="pusher">
+        <div class="ui centered grid" style="width: 100%;">
+            <div class="row"></div>
+            <div class="row">
+                <div class="eight wide column">
+                    <section id="main">
+                        {{outlet}}
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </section>
