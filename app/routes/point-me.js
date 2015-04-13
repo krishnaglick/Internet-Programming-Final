@@ -6,6 +6,9 @@ var pointMeRoute = Ember.Route.extend(ApplicationRouteMixin, {
 		if(!this.session.isAuthenticated) {
 			this.transitionTo('point-me.login');
 		}
+	},
+	afterModel: function() {
+		Ember.$('.ui.sidebar').sidebar();
 	}
 });
 
