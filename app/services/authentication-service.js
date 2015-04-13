@@ -5,6 +5,9 @@ var authenticationService = Ember.Service.extend({
 	injectIn: 'routes',
 	availableIn: 'controllers',
 	login: function(data) {
+		if(data.username == '' || data.password == '') {
+			return;
+		}
 		return Ember.$.ajax({
 			type: "POST",
 			dataType: "JSON",
@@ -28,6 +31,12 @@ var authenticationService = Ember.Service.extend({
 				email: data.email
 			})
 		});
+	},
+	createSession: function(controller, requestData) {
+		controller.session.set('token', requestData.token);
+		controller.session.username = controller.data.username;
+		controller.session.set('isAuthenticated', true);
+		controller.transitionToRoute('point-me.share');
 	}
 });
 

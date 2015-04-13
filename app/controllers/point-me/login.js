@@ -11,22 +11,20 @@ var loginController = Ember.Controller.extend({
 	},
 	actions: {
         login: function() {
-            this.get('authenticationService').login(this.data)
-			.success(function(data) {
-				this.session.set('token', data.token);
-				this.session.username = this.data.username;
-				this.session.set('isAuthenticated', true);
-				this.transitionToRoute('point-me.share');
-			}.bind(this));
+            var authXHR = this.get('authenticationService').login(this.data);
+            if(authXHR) {
+            	authXHR.success(function(data) {
+            		this.get('authenticationService').createSession(this, data);
+            	}.bind(this));
+			}
         },
         register: function() {
-			this.get('authenticationService').register(this.data)
-			.success(function(data) {
-				this.session.set('token', data.token);
-				this.session.username = this.data.username;
-				this.session.isAuthenticated = true;
-				this.transitionToRoute('point-me.share');
-			}.bind(this));
+            var authXHR = this.get('authenticationService').register(this.data);
+            if(authXHR) {
+            	authXHR.success(function(data) {
+            		this.get('authenticationService').createSession(this, data);
+            	}.bind(this));
+			}
         },
 		createAccount: function() {
 			this.set('isRegistering', true);
