@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
 var shareController = Ember.Controller.extend({
-	imageUploader: Ember.inject.service('imageUploader'),
+	imageUploader: Ember.inject.service('image-uploader-service'),
 	appTitle: 'Home',
 	haveImage: '',
+	imageUrl: '',
 	loading: '',
 	actions: {
 		selectImage: function() {
@@ -17,7 +18,7 @@ var shareController = Ember.Controller.extend({
 			this.set('haveImage', '');
 		},
 		submitPointMe: function() {
-			if('token' in window.sessionStore) {
+			if(this.session.isAuthenticated) {
 				Ember.$.ajax({
 					type: "POST",
 					dataType: "JSON",
@@ -36,7 +37,6 @@ var shareController = Ember.Controller.extend({
 					}
 				});
 			}
-			//Post my model to PHP backend
 		}
 	}
 });

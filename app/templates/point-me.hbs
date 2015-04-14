@@ -1,31 +1,35 @@
-<section id="point-me-app" style="height: 100%">
+<section id="point-me-app">
     {{document-title title=appName}}
-    <section id="sidebar" class="ui left vertical inverted labeled icon sidebar menu">
+    <section id="sidebar" class="ui green left vertical sidebar menu">
         <div class="item">
             <h2 class="ui dark blue header">
                 <i class="ui dark blue circular marker icon"></i>
                 {{appName}}
             </h2>
         </div>
-        <div class="item">
-            {{session.username}}
-        </div>
         {{#if session.isAuthenticated}}
-            <div class="item" {{action 'share'}}>
+            <div class="ui header item">
+                {{session.username}}
+            </div>
+            <div class="link item" {{action 'share'}}>
                 Share
             </div>
 
-            <div class="item" {{action 'myPoints'}}>
+            <div class="link item" {{action 'myPoints'}}>
                 See My Points
             </div>
 
-            <div class="item" {{action 'logout'}}>
+            <div class="link item" {{action 'logout'}}>
                 Logout
             </div>
         {{/if}}
     </section>
-    <section id="content" class="pusher">
-        <div class="ui centered grid" style="width: 100%;">
+    <section id="content" class="pushable">
+        <div class="ui blue launch right attached fixed button" {{action 'toggleSidebar'}}>
+            <i class="content icon"></i>
+            <span class="text">Menu</span>
+        </div>
+        <div id="contentGrid" class="ui centered stackable grid" style="width: 100%;">
             <div class="row"></div>
             <div class="row">
                 <div class="eight wide column">

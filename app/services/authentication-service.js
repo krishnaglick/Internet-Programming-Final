@@ -37,6 +37,9 @@ var authenticationService = Ember.Service.extend({
 		controller.session.username = controller.data.username;
 		controller.session.set('isAuthenticated', true);
 		controller.transitionToRoute('point-me.share');
+		controller.set('data.username', '');
+		controller.set('data.password', '');
+		controller.set('data.email', '');
 	}
 });
 

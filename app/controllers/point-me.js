@@ -13,6 +13,10 @@ var pointMeController = Ember.Controller.extend({
 			this.session.set('isAuthenticated', false);
 			this.session.set('username', '');
 			this.transitionToRoute('point-me.login');
+			Ember.$('.ui.sidebar').sidebar('toggle');
+		},
+		toggleSidebar: function() {
+			Ember.$('.ui.sidebar').sidebar('toggle');
 		}
 	}
 });

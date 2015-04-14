@@ -1,0 +1,9 @@
+.pushable {
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	#contentGrid {
+		margin-top: 10%;
+	}
+}

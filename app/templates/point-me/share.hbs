@@ -25,18 +25,22 @@
 
 	<div class="field">
 		{{input type="file" id="uploadAnImage" isVisible=false value=haveImage accept="image/*"}}
-		{{#if haveImage}}
-	        <div class="ui compact inverted green button {{loading}}" {{action 'clearImage'}}>
-	            Clear Image
-	        </div>
-        {{else}}
-	        <div class="ui compact inverted blue button {{loading}}" {{action 'selectImage'}}>
-	            Select Image
-	        </div>
+		{{#if model.imgurID}}
+			<img {{bind-attr src="imageUrl"}} style="width: 100px; height: 100px;" />
+		{{else}}
+			{{#if haveImage}}
+		        <div class="ui compact inverted blue button {{loading}}" {{action 'uploadImage'}}>
+		            Upload Image
+		        </div>
+		        <div class="ui compact inverted green button {{loading}}" {{action 'clearImage'}}>
+		            Clear Image
+		        </div>
+	        {{else}}
+		        <div class="ui compact inverted blue button" {{action 'selectImage'}}>
+		            Select Image
+		        </div>
+	        {{/if}}
         {{/if}}
-        <div class="ui compact inverted blue button {{loading}}" {{action 'uploadImage'}}>
-            Upload Image
-        </div>
 	</div>
 
 	<div class="ui compact inverted blue button" {{action 'submitPointMe'}}>
