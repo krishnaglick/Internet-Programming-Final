@@ -13,17 +13,17 @@
     {{/if}}
 
     {{#if isRegistering}}
-    <div class="ui compact inverted blue button" {{action 'register'}}>
+    <div class="ui compact inverted green button {{loading}}" {{action 'register'}}>
         Register
     </div>
-    <div class="ui compact inverted blue button" {{action 'cancelCreateAccount'}}>
+    <div class="ui compact inverted red button {{loading}}" {{action 'cancelCreateAccount'}}>
         Cancel
     </div>
     {{else}}
-    <div class="ui compact inverted blue button" {{action 'login'}}>
+    <div class="ui compact inverted green button {{loading}}" {{action 'login'}}>
         Login
     </div>
-    <div class="ui compact inverted blue button" {{action 'createAccount'}}>
+    <div class="ui compact inverted blue button {{loading}}" {{action 'createAccount'}}>
         Create Account
     </div>
     {{/if}}

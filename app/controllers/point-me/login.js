@@ -4,6 +4,7 @@ var loginController = Ember.Controller.extend({
 	authenticationService: Ember.inject.service('authenticationService'),
 	appTitle: 'Login',
 	isRegistering: false,
+	loading: '',
 	data: {
 		username: '',
 		password: '',
@@ -11,18 +12,26 @@ var loginController = Ember.Controller.extend({
 	},
 	actions: {
         login: function() {
+        	this.set('loading', 'loading');
             var authXHR = this.get('authenticationService').login(this.data);
             if(authXHR) {
             	authXHR.success(function(data) {
             		this.get('authenticationService').createSession(this, data);
             	}.bind(this));
+            	authXHR.complete(function() {
+            		this.set('loading', '');
+            	}.bind(this));
 			}
         },
         register: function() {
+        	this.set('loading', 'loading');
             var authXHR = this.get('authenticationService').register(this.data);
             if(authXHR) {
             	authXHR.success(function(data) {
             		this.get('authenticationService').createSession(this, data);
+            	}.bind(this));
+            	authXHR.complete(function() {
+            		this.set('loading', '');
             	}.bind(this));
 			}
         },

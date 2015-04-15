@@ -1,5 +1,4 @@
 {{document-title title=appTitle}}
-
 <form class="ui form">
 	<div class="field">
 		<div class="ui input">
@@ -25,14 +24,14 @@
 
 	<div class="field">
 		{{input type="file" id="uploadAnImage" isVisible=false value=haveImage accept="image/*"}}
-		{{#if model.imgurID}}
-			<img {{bind-attr src="imageUrl"}} style="width: 100px; height: 100px;" />
+		{{#if model.imgurLink}}
+			<img {{bind-attr src="model.imgurLink"}} style="width: 100px; height: 100px;" />
 		{{else}}
 			{{#if haveImage}}
-		        <div class="ui compact inverted blue button {{loading}}" {{action 'uploadImage'}}>
+		        <div class="ui compact inverted green button {{loading}}" {{action 'uploadImage'}}>
 		            Upload Image
 		        </div>
-		        <div class="ui compact inverted green button {{loading}}" {{action 'clearImage'}}>
+		        <div class="ui compact inverted red button {{loading}}" {{action 'clearImage'}}>
 		            Clear Image
 		        </div>
 	        {{else}}
@@ -43,7 +42,7 @@
         {{/if}}
 	</div>
 
-	<div class="ui compact inverted blue button" {{action 'submitPointMe'}}>
+	<div class="ui compact inverted green button" {{action 'submitPointMe'}}>
 		Point!
 	</div>
 </form>

@@ -2,9 +2,8 @@ import Ember from 'ember';
 
 var shareController = Ember.Controller.extend({
 	imageUploader: Ember.inject.service('image-uploader-service'),
-	appTitle: 'Home',
+	appTitle: 'Share a Point!',
 	haveImage: '',
-	imageUrl: '',
 	loading: '',
 	actions: {
 		selectImage: function() {
@@ -19,23 +18,29 @@ var shareController = Ember.Controller.extend({
 		},
 		submitPointMe: function() {
 			if(this.session.isAuthenticated) {
-				Ember.$.ajax({
-					type: "POST",
-					dataType: "JSON",
-					contentType: "application/json",
-					url: 'http://cop4813.ccec.unf.edu/~group4/user.php/register',
-					headers: {
-						token: this.session.token
-					},
-					data: JSON.stringify({
-						username: '',
-						password: '',
-						email: ''
-					}),
-					success: function(data) {
-						window.sessionStore.token = data.token;
-					}
-				});
+				function sendRequest(controller, model) {
+					Ember.$.ajax({
+						type: "POST",
+						dataType: "JSON",
+						contentType: "application/json",
+						url: 'http://cop4813.ccec.unf.edu/~group4/point_me.php/add',
+						headers: {
+							token: controller.get('session.token')
+						},
+						data: JSON.stringify({
+							friendsEmail: model.get('friendsEmail'),
+							userEmail: model.get('userEmail'),
+							location: model.get('location'),
+							userComment: model.get('comment'),
+							imgurLink: model.get('imgurLink'),
+							imgurDeleteHash: model.get('imgurDeleteHash')
+						}),
+						success: function(data) {
+							controller.set('model', controller.store.createRecord('share', {}));
+						}
+					});
+				}
+				sendRequest(this, this.get('model'));
 			}
 		}
 	}

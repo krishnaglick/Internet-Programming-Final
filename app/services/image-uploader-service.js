@@ -22,8 +22,7 @@ var imageUploader = Ember.Service.extend({
 					image: base64Image.result.split(',')[1],
 				}
 			}).success(function(data) {
-				pointMeController.set('imageUrl', data.data.link);
-				pointMeModel.set('imgurID', data.data.id);
+				pointMeModel.set('imgurLink', data.data.link);
 				pointMeModel.set('imgurDeleteHash', data.data.deletehash);
 			}).complete(function() {
 				pointMeController.set('loading', '');

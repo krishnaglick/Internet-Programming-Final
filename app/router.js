@@ -12,6 +12,7 @@ Router.map(function() {
 	this.resource('point-me', function() {
 		this.route('login');
 		this.route('share');
+		this.route('myPoints');
 	});
 });
 

@@ -5,9 +5,11 @@ var pointMeController = Ember.Controller.extend({
 	actions: {
 		share: function() {
 			this.transitionToRoute('point-me.share');
+			Ember.$('.ui.sidebar').sidebar('toggle');
 		},
 		myPoints: function() {
 			this.transitionToRoute('point-me.myPoints');
+			Ember.$('.ui.sidebar').sidebar('toggle');
 		},
 		logout: function() {
 			this.session.set('isAuthenticated', false);

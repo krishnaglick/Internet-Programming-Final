@@ -1,6 +1,6 @@
 <section id="point-me-app">
     {{document-title title=appName}}
-    <section id="sidebar" class="ui green left vertical sidebar menu">
+    <div id="sidebar" class="ui green left vertical sidebar menu">
         <div class="item">
             <h2 class="ui dark blue header">
                 <i class="ui dark blue circular marker icon"></i>
@@ -23,21 +23,20 @@
                 Logout
             </div>
         {{/if}}
-    </section>
-    <section id="content" class="pushable">
-        <div class="ui blue launch right attached fixed button" {{action 'toggleSidebar'}}>
-            <i class="content icon"></i>
-            <span class="text">Menu</span>
-        </div>
+    </div>
+    <div id="content" class="pushable">
         <div id="contentGrid" class="ui centered stackable grid" style="width: 100%;">
             <div class="row"></div>
             <div class="row">
                 <div class="eight wide column">
-                    <section id="main">
+                    <div class="ui teal segment">
+                        <div class="ui teal left corner label" {{action 'toggleSidebar'}}>
+                            <i class="content link icon"></i>
+                        </div>
                         {{outlet}}
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </section>
