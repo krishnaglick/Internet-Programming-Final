@@ -19,6 +19,7 @@ var pointMeController = Ember.Controller.extend({
 		},
 		toggleSidebar: function() {
 			Ember.$('.ui.sidebar').sidebar('toggle');
+			Ember.$('#menuText').transition('fade right');
 		},
 		menuMouseover: function() {
 			Ember.$('#menuText').transition('fade right');
