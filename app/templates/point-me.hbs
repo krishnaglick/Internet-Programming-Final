@@ -29,9 +29,14 @@
             <div class="row"></div>
             <div class="row">
                 <div class="eight wide column">
-                    <div class="ui teal segment">
-                        <div class="ui teal left corner label" {{action 'toggleSidebar'}}>
-                            <i class="content link icon"></i>
+                    <div class="ui raised teal segment">
+                        <div class="ui top attached teal label">
+                            <span {{action 'toggleSidebar'}}>
+                                <span {{action 'menuMouseover' on='mouseEnter'}}>
+                                <i class="content link icon" {{action 'menuMouseover' on='mouseLeave'}}></i>
+                                </span>
+                                <span id="menuText" style="display: none;">Menu</span>
+                            </span>
                         </div>
                         {{outlet}}
                     </div>
