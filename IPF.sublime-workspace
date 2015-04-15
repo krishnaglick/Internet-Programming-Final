@@ -348,10 +348,10 @@
 			}
 		},
 		{
-			"file": "app/services/point-lister-service.js",
+			"file": "app/controllers/point-me/my-points.js",
 			"settings":
 			{
-				"buffer_size": 498,
+				"buffer_size": 322,
 				"line_ending": "Windows"
 			}
 		},
@@ -359,7 +359,7 @@
 			"file": "app/routes/point-me/my-points.js",
 			"settings":
 			{
-				"buffer_size": 509,
+				"buffer_size": 461,
 				"line_ending": "Windows"
 			}
 		},
@@ -511,6 +511,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Promethean/Internet-Programming-Final/app/services/point-listener-service.js",
 		"/C/Users/Promethean/Internet-Programming-Final/app/templates/point-me.hbs",
 		"/C/Users/Promethean/Internet-Programming-Final/app/styles/IPF.css",
 		"/C/Users/Promethean/Internet-Programming-Final/app/index.html",
@@ -588,14 +589,16 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"C:\\Users\\Promethean\\Internet-Programming-Final\\app",
 			"D:\\wamp\\www"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"lister",
 			"data.",
 			"\"'*'\"",
 			"contentSecurityPolicyHeader ",
@@ -776,7 +779,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -859,8 +862,8 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 180.0,
+						"translation.x": 0.0,
+						"translation.y": 105.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -868,31 +871,30 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/services/point-lister-service.js",
+					"file": "app/controllers/point-me/my-points.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 498,
+						"buffer_size": 322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								135,
+								135
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -901,15 +903,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 509,
+						"buffer_size": 461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								259,
-								259
+								391,
+								391
 							]
 						],
 						"settings":
@@ -917,11 +919,11 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
