@@ -17,7 +17,6 @@ var loginController = Ember.Controller.extend({
             if(authXHR) {
             	authXHR.success(function(data) {
             		this.get('authenticationService').createSession(this, data);
-                    debugger;
             	}.bind(this));
             	authXHR.complete(function() {
             		this.set('loading', '');

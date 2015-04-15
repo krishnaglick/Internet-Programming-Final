@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 		}
 	},
 	setupController: function(controller, model) {
-		var getPointsXHR = this.service('point-lister-service').getMyPoints(controller.get('session.token'));
+		var getPointsXHR = contoller.get('point-lister-service').getMyPoints(controller.get('session.token'));
 		getPointsXHR.success(function(data) {
 			controller.set('myPoints', data);
 		});

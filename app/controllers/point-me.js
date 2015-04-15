@@ -8,7 +8,7 @@ var pointMeController = Ember.Controller.extend({
 			Ember.$('.ui.sidebar').sidebar('toggle');
 		},
 		myPoints: function() {
-			this.transitionToRoute('point-me.myPoints');
+			this.transitionToRoute('point-me.my-points');
 			Ember.$('.ui.sidebar').sidebar('toggle');
 		},
 		logout: function() {

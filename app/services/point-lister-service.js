@@ -7,7 +7,7 @@ var pointLister = Ember.Service.extend({
 	getMyPoints: function(authToken) {
 		if(authToken) {
 			return Ember.$.ajax({
-				type: "POST",
+				type: "GET",
 				dataType: "JSON",
 				contentType: "application/json",
 				url: 'http://cop4813.ccec.unf.edu/~group4/point_me.php/get',
