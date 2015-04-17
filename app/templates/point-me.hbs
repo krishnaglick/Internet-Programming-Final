@@ -25,7 +25,7 @@
         {{/if}}
     </div>
     <div id="content" class="pushable">
-        <div id="contentGrid" class="ui centered stackable grid" style="width: 100%;">
+        <div id="contentGrid" class="ui centered stackable page grid">
             <div class="row"></div>
             <div class="row">
                 <div class="eight wide column">
@@ -35,7 +35,7 @@
                                 <span {{action 'menuMouseover' on='mouseEnter'}}>
                                 <i class="content link icon" {{action 'menuMouseover' on='mouseLeave'}}></i>
                                 </span>
-                                <span id="menuText" style="display: none;">Menu</span>
+                                <span id="menuText" class="hidden">Menu</span>
                             </span>
                         </div>
                         {{outlet}}

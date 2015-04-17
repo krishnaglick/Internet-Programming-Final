@@ -1,9 +1,8 @@
 import Ember from 'ember';
 
-var myPointsController = Ember.Controller.extend({
+var pointController = Ember.Controller.extend({
 	pointLister: Ember.inject.service('point-lister-service'),
-	appTitle: 'My Points',
-	myPoints: [],
+	point: [],
 	actions: {
 		deletePoint: function(point) {
 			debugger;
@@ -12,4 +11,4 @@ var myPointsController = Ember.Controller.extend({
 	}
 });
 
-export default myPointsController;
+export default pointController;

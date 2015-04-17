@@ -10,9 +10,7 @@ export default Ember.Route.extend({
 		var getPointsXHR = controller.get('pointLister').getMyPoints(controller.get('session.token'));
 		getPointsXHR.success(function(data) {
 			controller.set('myPoints', data);
-		});
-		getPointsXHR.complete(function() {
-			debugger;
+			console.log(data);
 		});
 	}
 });

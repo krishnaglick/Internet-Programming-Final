@@ -1,4 +1,28 @@
 {{document-title title=appTitle}}
 
-{{#each point in myPoints}}
-{{/each}}
+<table class="ui table">
+	<thead>
+		<th>Location</th>
+		<th>Comment</th>
+		<th>Picture</th>
+		<th></th>
+	</thead>
+	<tbody>
+		{{#each point in myPoints itemController='point-me.point'}}
+			{{#if imgurLink}}
+			<tr>
+				<td>{{location}}</td>
+				<td>{{userComment}}</td>
+				<td>
+					<a {{bind-attr href=imgurLink}}>
+						<img {{bind-attr src="imgurLink"}} style="width: 100px; height: 100px;" />
+					</a>
+				</td>
+				<td>
+					<i class="link remove icon" {{action 'deletePoint'}}></i>
+				</td>
+			</tr>
+			{{/if}}
+		{{/each}}
+	</tbody>
+</table>

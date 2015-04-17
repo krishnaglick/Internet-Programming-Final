@@ -1,5 +1,8 @@
 .pushable {
-	overflow: hidden;
+	overflow-x: hidden;
+}
+.hidden {
+	display: none !important;
 }
 
 /*@media (max-width: 768px) {
