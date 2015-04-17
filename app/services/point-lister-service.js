@@ -17,8 +17,10 @@ var pointLister = Ember.Service.extend({
 			});
 		}
 	},
-	deletePoint: function(point) {
+	deletePoint: function(pointDeleteHash) {
 		debugger;
+		//backend delete point
+		//imgur delete image
 	}
 });
 

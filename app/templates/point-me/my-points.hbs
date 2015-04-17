@@ -9,13 +9,13 @@
 	</thead>
 	<tbody>
 		{{#each point in myPoints itemController='point-me.point'}}
-			{{#if imgurLink}}
+			{{#if point.model.imgurLink}}
 			<tr>
-				<td>{{location}}</td>
-				<td>{{userComment}}</td>
+				<td>{{point.model.location}}</td>
+				<td>{{point.model.userComment}}</td>
 				<td>
-					<a {{bind-attr href=imgurLink}}>
-						<img {{bind-attr src="imgurLink"}} style="width: 100px; height: 100px;" />
+					<a {{bind-attr href=point.model.imgurLink}}>
+						<img {{bind-attr src="point.model.imgurLink"}} style="width: 100px; height: 100px;" />
 					</a>
 				</td>
 				<td>
