@@ -6,11 +6,12 @@ export default Ember.Route.extend({
 			this.transitionTo('point-me.login');
 		}
 	},
-	setupController: function(controller) {
+	setupController: (controller) => {
 		var getPointsXHR = controller.get('pointLister').getMyPoints(controller.get('session.token'));
 		getPointsXHR.success(function(data) {
 			controller.set('myPoints', data);
-			console.log(data);
 		});
+
+		controller.set('session.appTitle', 'My Points');
 	}
 });

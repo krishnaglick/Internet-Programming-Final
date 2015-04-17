@@ -1,29 +1,28 @@
-{{document-title title=appTitle}}
-<form class="ui form">
+<form class="ui form {{loading}}">
     <div class="field">
-        {{input value=data.username placeholder="Username" type="text"}}
+        {{input value=user.username placeholder="Username" type="text"}}
     </div>
     <div class="field">
-        {{input value=data.password placeholder="Password" type="password"}}
+        {{input value=user.password placeholder="Password" type="password"}}
     </div>
     {{#if isRegistering}}
     <div class="field">
-        {{input value=data.email placeholder="Email" type="text"}}
+        {{input value=user.email placeholder="Email" type="text"}}
     </div>
     {{/if}}
 
     {{#if isRegistering}}
-    <div class="ui compact inverted green button {{loading}}" {{action 'register'}}>
+    <div class="ui compact inverted green button" {{action 'register'}}>
         Register
     </div>
-    <div class="ui compact inverted red button {{loading}}" {{action 'cancelCreateAccount'}}>
+    <div class="ui compact inverted red button" {{action 'cancelCreateAccount'}}>
         Cancel
     </div>
     {{else}}
-    <div class="ui compact inverted green button {{loading}}" {{action 'login'}}>
+    <div class="ui compact inverted green button" {{action 'login'}}>
         Login
     </div>
-    <div class="ui compact inverted blue button {{loading}}" {{action 'createAccount'}}>
+    <div class="ui compact inverted blue button" {{action 'createAccount'}}>
         Create Account
     </div>
     {{/if}}

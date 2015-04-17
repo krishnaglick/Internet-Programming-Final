@@ -10,5 +10,8 @@ export default Ember.Route.extend(DataRoute, {
 	},
 	model: function() {
 		return this.store.createRecord('share', {});
+	},
+	setupController: (controller) => {
+		controller.set('session.appTitle', 'Share a Point');
 	}
 });

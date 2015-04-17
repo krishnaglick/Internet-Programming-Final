@@ -1,5 +1,6 @@
 <section id="point-me-app">
     {{document-title title=appName}}
+    {{document-title title=this.session.appTitle}}
     <div id="sidebar" class="ui green left vertical sidebar menu">
         <div class="item">
             <h2 class="ui dark blue header">
@@ -32,11 +33,12 @@
                     <div class="ui raised teal segment">
                         <div class="ui top attached teal label">
                             <span {{action 'toggleSidebar'}}>
-                                <span {{action 'menuMouseover' on='mouseEnter'}}>
                                 <i class="content link icon" {{action 'menuMouseover' on='mouseLeave'}}></i>
-                                </span>
-                                <span id="menuText" class="hidden">Menu</span>
+                                <a>Menu</a>
                             </span>
+                            <div class="ui top right attached teal label">
+                            {{this.session.appTitle}}
+                            </div>
                         </div>
                         {{outlet}}
                     </div>

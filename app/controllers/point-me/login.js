@@ -2,10 +2,9 @@ import Ember from 'ember';
 
 var loginController = Ember.Controller.extend({
 	authenticationService: Ember.inject.service('authenticationService'),
-	appTitle: 'Login',
 	isRegistering: false,
 	loading: '',
-	data: {
+	user: {
 		username: '',
 		password: '',
 		email: ''
@@ -13,35 +12,35 @@ var loginController = Ember.Controller.extend({
 	actions: {
         login: function() {
         	this.set('loading', 'loading');
-            var authXHR = this.get('authenticationService').login(this.data);
+            var authXHR = this.get('authenticationService').login(this.user);
             if(authXHR) {
-            	authXHR.success(function(data) {
+            	authXHR.success((data) => {
             		this.get('authenticationService').createSession(this, data);
-            	}.bind(this));
-            	authXHR.complete(function() {
+            	});
+            	authXHR.complete(() => {
             		this.set('loading', '');
-            	}.bind(this));
+            	});
 			}
         },
         register: function() {
         	this.set('loading', 'loading');
-            var authXHR = this.get('authenticationService').register(this.data);
+            var authXHR = this.get('authenticationService').register(this.user);
             if(authXHR) {
-            	authXHR.success(function(data) {
+            	authXHR.success((data) => {
             		this.get('authenticationService').createSession(this, data);
-            	}.bind(this));
-            	authXHR.complete(function() {
+            	});
+            	authXHR.complete(() => {
             		this.set('loading', '');
-            	}.bind(this));
+            	});
 			}
         },
 		createAccount: function() {
 			this.set('isRegistering', true);
-			this.set('appTitle', 'Register');
+			this.set('session.appTitle', 'Register');
 		},
 		cancelCreateAccount: function() {
 			this.set('isRegistering', false);
-			this.set('appTitle', 'Login');
+			this.set('session.appTitle', 'Login');
 		}
 	}
 });
