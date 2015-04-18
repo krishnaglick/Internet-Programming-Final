@@ -17,30 +17,32 @@ var shareController = Ember.Controller.extend({
 			this.set('haveImage', '');
 		},
 		submitPointMe: function() {
+			function savePointMe(controller, model) {
+				Ember.$.ajax({
+					type: "POST",
+					dataType: "JSON",
+					contentType: "application/json",
+					url: 'http://cop4813.ccec.unf.edu/~group4/point_me.php/add',
+					headers: {
+						token: controller.get('session.token')
+					},
+					data: JSON.stringify({
+						friendsEmail: model.get('friendsEmail'),
+						userEmail: model.get('userEmail'),
+						location: model.get('location'),
+						userComment: model.get('comment'),
+						imgurLink: model.get('imgurLink'),
+						imgurDeleteHash: model.get('imgurDeleteHash')
+					}),
+					success: (data) => {
+						controller.set('model', controller.store.createRecord('share', {}));
+						controller.set('haveImage', '');
+					}
+				});
+			}
+
 			if(this.session.isAuthenticated) {
-				function sendRequest(controller, model) {
-					Ember.$.ajax({
-						type: "POST",
-						dataType: "JSON",
-						contentType: "application/json",
-						url: 'http://cop4813.ccec.unf.edu/~group4/point_me.php/add',
-						headers: {
-							token: controller.get('session.token')
-						},
-						data: JSON.stringify({
-							friendsEmail: model.get('friendsEmail'),
-							userEmail: model.get('userEmail'),
-							location: model.get('location'),
-							userComment: model.get('comment'),
-							imgurLink: model.get('imgurLink'),
-							imgurDeleteHash: model.get('imgurDeleteHash')
-						}),
-						success: function(data) {
-							controller.set('model', controller.store.createRecord('share', {}));
-						}
-					});
-				}
-				sendRequest(this, this.get('model'));
+				savePointMe(this, this.get('model'));
 			}
 		}
 	}
