@@ -1,25 +1,25 @@
 <form class="ui form {{loading}}">
     <div class="field">
-        {{input value=user.username placeholder="Username" type="text" autofocus="autofocus"}}
+        {{input value=user.username placeholder="Username" action="enterAction" type="text" autofocus="autofocus"}}
     </div>
     <div class="field">
-        {{input value=user.password placeholder="Password" type="password"}}
+        {{input value=user.password placeholder="Password" action="enterAction" type="password"}}
     </div>
     {{#if isRegistering}}
     <div class="field">
-        {{input value=user.email placeholder="Email" type="text"}}
+        {{input value=user.email placeholder="Email" action="enterAction" type="text"}}
     </div>
     {{/if}}
 
     {{#if isRegistering}}
-    <div class="ui compact inverted green button" {{action 'register'}}>
+    <div class="ui compact inverted green button {{if canRegister '' 'disabled'}}" {{action 'register'}}>
         Register
     </div>
     <div class="ui compact inverted red button" {{action 'cancelCreateAccount'}}>
         Cancel
     </div>
     {{else}}
-    <div class="ui compact inverted green button" {{action 'login'}}>
+    <div class="ui compact inverted green button {{if canLogin '' 'disabled'}}" {{action 'login'}}>
         Login
     </div>
     <div class="ui compact inverted blue button" {{action 'createAccount'}}>
