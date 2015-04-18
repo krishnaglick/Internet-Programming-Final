@@ -41,7 +41,7 @@
         {{/if}}
 	</div>
 
-	<div class="ui compact inverted green button" {{action 'submitPointMe'}}>
+	<div class="ui compact inverted green button {{if model.imgurLink '' 'disabled'}}" {{action 'submitPointMe'}}>
 		Point!
 	</div>
 </form>

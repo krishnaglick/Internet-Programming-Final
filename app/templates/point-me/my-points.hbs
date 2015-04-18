@@ -1,26 +1,22 @@
-<div class="ui three doubling cards">
+<div class="ui three mobile six desktop doubling cards">
 {{#each point in myPoints itemController='point-me.point'}}
 	{{#if point.model.imgurLink}}
-	<div class="card">
-		<div class="ui small image">
-			<a {{bind-attr href=point.model.imgurLink}} target="_blank">
-			<img {{bind-attr src="point.model.imgurLink"}} />
-			</a>
-		</div>
-		<div class="content">
-			<div class="header">
-			Location
-			<i class="link remove icon" {{action 'deletePoint'}}></i>
+		<div class="card">
+			<div class="ui small image">
+				<a {{bind-attr href=point.model.imgurLink}} target="_blank">
+				<img {{bind-attr src="point.model.imgurLink"}} />
+				</a>
 			</div>
-			<div class="meta">
-				{{point.model.location}}
+			<div class="content">
+				<div class="header">Location</div>
+				<i class="link remove icon" {{action 'deletePoint'}}></i>
+				<div class="meta">{{point.model.location}}</div>
+			</div>
+			<div class="extra content">
+				<div class="header">Comment</div>
+				<div class="meta">{{point.model.userComment}}</div>
 			</div>
 		</div>
-		<div class="extra content">
-			<div class="header">Comment</div>
-			<div class="meta">{{point.model.userComment}}</div>
-		</div>
-	</div>
 	{{/if}}
 {{/each}}
 </div>
