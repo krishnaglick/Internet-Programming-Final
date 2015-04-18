@@ -27,6 +27,7 @@ var loginController = Ember.Controller.extend({
                 		this.get('authenticationService').createSession(this, data);
                         this.set('session.message', 'Welcome to Point-Me!');
                         this.set('session.messageTitle', 'Logged In');
+                        Ember.$('#errorMessage').slideDown();
                 	});
                 	authXHR.complete(() => {
                 		this.set('loading', '');
@@ -43,6 +44,7 @@ var loginController = Ember.Controller.extend({
                 		this.get('authenticationService').createSession(this, data);
                         this.set('session.message', 'Welcome to Point-Me!');
                         this.set('session.messageTitle', 'Account Created');
+                        Ember.$('#errorMessage').slideDown();
                 	});
                 	authXHR.complete(() => {
                 		this.set('loading', '');

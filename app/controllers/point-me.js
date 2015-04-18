@@ -24,6 +24,7 @@ var pointMeController = Ember.Controller.extend({
 		clearError: function() {
 			this.set('session.message', '');
 			this.set('session.messageTitle', '');
+			Ember.$('#errorMessage').slideUp();//transition('slide down');
 		}
 	}
 });
