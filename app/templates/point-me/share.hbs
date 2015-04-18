@@ -1,4 +1,4 @@
-<form class="ui form">
+<form class="ui form {{loading}}">
 	<div class="field">
 		<div class="ui input">
 			{{input value=model.friendsEmail placeholder="Friend's Email" type="text"}}
@@ -27,10 +27,10 @@
 			<img {{bind-attr src="model.imgurLink"}} style="width: 100px; height: 100px;" />
 		{{else}}
 			{{#if haveImage}}
-		        <div class="ui compact inverted green button {{loading}}" {{action 'uploadImage'}}>
+		        <div class="ui compact inverted green button" {{action 'uploadImage'}}>
 		            Upload Image
 		        </div>
-		        <div class="ui compact inverted red button {{loading}}" {{action 'clearImage'}}>
+		        <div class="ui compact inverted red button" {{action 'clearImage'}}>
 		            Clear Image
 		        </div>
 	        {{else}}
