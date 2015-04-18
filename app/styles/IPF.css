@@ -9,6 +9,10 @@
 	overflow-y: hidden;
 }
 
+.no-resize {
+	resize: none !important;
+}
+
 /*@media (max-width: 768px) {
 	#contentGrid {
 		margin-top: 10%;
