@@ -5,6 +5,14 @@ var shareController = Ember.Controller.extend({
 	appTitle: 'Share a Point!',
 	haveImage: '',
 	loading: '',
+	formValid: function() {
+		return	this.get('model.friendsEmail')		&&
+				this.get('model.userEmail')			&&
+				this.get('model.location')			&&
+				this.get('model.comment')			&&
+				this.get('model.imgurLink')			&&
+				this.get('model.imgurDeleteHash')	;
+	}.property('model.friendsEmail', 'model.userEmail', 'model.location', 'model.comment', 'model.imgurLink', 'model.imgurDeleteHash'),
 	actions: {
 		selectImage: function() {
 			Ember.$('#uploadAnImage').click();
