@@ -5,6 +5,10 @@
 	display: none !important;
 }
 
+.no-scrollbar {
+	overflow-y: hidden;
+}
+
 /*@media (max-width: 768px) {
 	#contentGrid {
 		margin-top: 10%;
