@@ -26,12 +26,19 @@
         {{/if}}
     </div>
     <div id="content" class="pushable no-scrollbar">
+
+        <div id="errorMessage" class="ui floating message {{if session.messageTitle '' 'hidden'}}">
+            <i class="close icon" {{action 'clearError'}}></i>
+            <div class="header">{{session.messageTitle}}</div>
+            <p>{{session.message}}</p>
+        </div>
+
         <div id="contentGrid" class="ui centered stackable page grid">
             <div class="row"></div>
             <div class="row">
                 <div class="sixteen wide mobile twelve wide tablet column">
                     <div class="ui raised teal segment">
-                        <div class="ui top attached teal label">
+                        <div class="ui top attached teal label no-radius">
                             <span {{action 'toggleSidebar'}}>
                                 <i class="content link icon"></i>
                                 <a>Menu</a>
