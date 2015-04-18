@@ -1,26 +1,26 @@
-<table class="ui table">
-	<thead>
-		<th>Location</th>
-		<th>Comment</th>
-		<th>Picture</th>
-		<th></th>
-	</thead>
-	<tbody>
-		{{#each point in myPoints itemController='point-me.point'}}
-			{{#if point.model.imgurLink}}
-			<tr>
-				<td>{{point.model.location}}</td>
-				<td>{{point.model.userComment}}</td>
-				<td>
-					<a {{bind-attr href=point.model.imgurLink}}>
-						<img {{bind-attr src="point.model.imgurLink"}} style="width: 100px; height: 100px;" />
-					</a>
-				</td>
-				<td>
-					<i class="link remove icon" {{action 'deletePoint'}}></i>
-				</td>
-			</tr>
-			{{/if}}
-		{{/each}}
-	</tbody>
-</table>
+<div class="ui three doubling cards">
+{{#each point in myPoints itemController='point-me.point'}}
+	{{#if point.model.imgurLink}}
+	<div class="card">
+		<div class="ui small image">
+			<a {{bind-attr href=point.model.imgurLink}} target="_blank">
+			<img {{bind-attr src="point.model.imgurLink"}} />
+			</a>
+		</div>
+		<div class="content">
+			<div class="header">
+			Location
+			<i class="link remove icon" {{action 'deletePoint'}}></i>
+			</div>
+			<div class="meta">
+				{{point.model.location}}
+			</div>
+		</div>
+		<div class="extra content">
+			<div class="header">Comment</div>
+			<div class="meta">{{point.model.userComment}}</div>
+		</div>
+	</div>
+	{{/if}}
+{{/each}}
+</div>
