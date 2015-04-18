@@ -49,7 +49,7 @@ var shareController = Ember.Controller.extend({
 				});
 			}
 
-			if(this.session.isAuthenticated) {
+			if(this.session.isAuthenticated && this.get('formValid')) {
 				savePointMe(this, this.get('model'));
 			}
 		}
