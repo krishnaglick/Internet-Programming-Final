@@ -7,6 +7,9 @@ var pointMeRoute = Ember.Route.extend(ApplicationRouteMixin, {
 			this.transitionTo('point-me.login');
 		}
 		Ember.$('#point-me-app .ui.sidebar').sidebar('setting', 'transition', 'overlay');
+
+		this.set('session.menu', {});
+
 		this.set('session.showMessage', (type, title, message) => {
             this.set('session.message', message);
             this.set('session.messageTitle', title);

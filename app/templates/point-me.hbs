@@ -1,7 +1,7 @@
 <section id="point-me-app">
     {{document-title title=appName}}
     {{document-title title=this.session.appTitle}}
-    <div id="sidebar" class="ui green left vertical sidebar menu">
+    <div id="sidebar" class="ui green left inline vertical sidebar uncover menu">
         <div class="item">
             <h2 class="ui dark blue header">
                 <i class="ui dark blue circular marker icon"></i>
@@ -9,25 +9,23 @@
             </h2>
         </div>
         {{#if session.isAuthenticated}}
-            <div class="ui header item">
-                {{session.username}}
-            </div>
-            <span id="menuNav">
-                <div id="share" class="link item" {{action 'share'}}>
-                    Share
-                </div>
+        <div class="ui header item">
+            {{session.username}}
+        </div>
+        <div class="{{session.menu.shareActive}} link item" {{action 'share'}}>
+            Share
+        </div>
 
-                <div id="seeMyPoints" class="link item" {{action 'myPoints'}}>
-                    See My Points
-                </div>
+        <div class="{{session.menu.myPointsActive}} link item" {{action 'myPoints'}}>
+            See My Points
+        </div>
 
-                <div id="logout" class="link item" {{action 'logout'}}>
-                    Logout
-                </div>
-            </span>
+        <div class="link item" {{action 'logout'}}>
+            Logout
+        </div>
         {{/if}}
     </div>
-    <div id="content" class="pushable no-scrollbar">
+    <div id="content" class="no-scrollbar">
         <div id="contentGrid" class="ui centered stackable page grid">
             <div class="row">
                 <div class="sixteen wide mobile twelve wide tablet eight wide computer column">

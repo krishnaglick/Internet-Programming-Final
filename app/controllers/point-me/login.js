@@ -26,7 +26,7 @@ var loginController = Ember.Controller.extend({
                 	authXHR.success((data) => {
                 		this.get('authenticationService').createSession(this, data);
                         this.get('session.showMessage')('positive', 'Logged In', 'Welcome to Point-Me!');
-                        Ember.$('#menuNav#share').addClass('active teal');
+                        this.set('session.menu.shareActive', 'active teal');
                 	});
                     authXHR.error((data) => {
                         if(data.status === 404) {
@@ -50,7 +50,7 @@ var loginController = Ember.Controller.extend({
                 	authXHR.success((data) => {
                 		this.get('authenticationService').createSession(this, data);
                         this.get('session.showMessage')('positive', 'Account Created', 'Welcome to Point-Me!');
-                        Ember.$('#menuNav#share').addClass('active teal');
+                        this.set('session.menu.shareActive', 'active teal');
                 	});
                     authXHR.error((data) => {
                         if(data.status === 409) {

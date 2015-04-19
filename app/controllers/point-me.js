@@ -2,18 +2,20 @@ import Ember from 'ember';
 
 var pointMeController = Ember.Controller.extend({
 	appName: 'PointMe',
+	shareActive: '',
+	myPointsActive: '',
 	actions: {
 		share: function() {
 			this.send('removeActiveMenuItems');
-			Ember.$('#menuNav#share').addClass('active teal');
 			this.transitionToRoute('point-me.share');
 			Ember.$('.ui.sidebar').sidebar('toggle');
+			this.set('session.menu.shareActive', 'active teal');
 		},
 		myPoints: function() {
 			this.send('removeActiveMenuItems');
-			Ember.$('#menuNav#seeMyPoints').addClass('active teal');
 			this.transitionToRoute('point-me.my-points');
 			Ember.$('.ui.sidebar').sidebar('toggle');
+			this.set('session.menu.myPointsActive', 'active teal');
 		},
 		logout: function() {
 			this.session.set('isAuthenticated', false);
@@ -32,7 +34,9 @@ var pointMeController = Ember.Controller.extend({
 			Ember.$('#errorMessage').slideUp();
 		},
 		removeActiveMenuItems: function() {
-			Ember.$('#menuNav.link.item').removeClass('active teal');
+			Ember.$('#sidebar > div.item').removeClass('active teal');
+			this.set('session.menu.shareActive', '');
+			this.set('session.menu.myPointsActive', '');
 		}
 	}
 });
