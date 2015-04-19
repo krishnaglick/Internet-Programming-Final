@@ -28,7 +28,7 @@
     <div id="content" class="no-scrollbar">
         <div id="contentGrid" class="ui centered stackable page grid">
             <div class="row">
-                <div class="sixteen wide mobile twelve wide tablet eight wide computer column">
+                <div class="{{session.grid}}">
                     <div id="errorMessage" class="hidden ui floating message {{session.messageType}}">
                         <i class="close icon" {{action 'clearError'}}></i>
                         <div class="header">{{session.messageTitle}}</div>

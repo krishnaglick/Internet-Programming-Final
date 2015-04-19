@@ -5,9 +5,6 @@ var authenticationService = Ember.Service.extend({
 	injectIn: 'routes',
 	availableIn: 'controllers',
 	login: function(user) {
-		if(user.username == '' || user.password == '') {
-			return;
-		}
 		return Ember.$.ajax({
 			type: "POST",
 			dataType: "JSON",

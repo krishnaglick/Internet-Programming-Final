@@ -42,7 +42,7 @@ var shareController = Ember.Controller.extend({
 						imgurLink: model.get('imgurLink'),
 						imgurDeleteHash: model.get('imgurDeleteHash')
 					}),
-					success: (data) => {
+					success: () => {
 						controller.set('model', controller.store.createRecord('share', {}));
 						controller.set('haveImage', '');
 						this.get('session.showMessage')('positive', 'Point Sent', 'Your Point-Me was sent!');
