@@ -14,5 +14,10 @@ export default Ember.Route.extend(DataRoute, {
 		controller.set('session.appTitle', 'Share a Point');
 		controller.set('model', model);
 		controller.set('session.grid', 'sixteen wide mobile twelve wide tablet eight wide computer column');
+	},
+	actions: {
+		willTransition: function() {
+			this.controller.set('haveImage', '');
+		}
 	}
 });
