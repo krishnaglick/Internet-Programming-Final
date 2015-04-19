@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"remove",
+				"removeActiveMenuItems"
+			],
+			[
+				"auth",
+				"authXHR"
+			],
+			[
+				"imgur",
+				"imgurDeleteHash"
+			],
+			[
 				"point",
-				"pointMeController"
+				"point-me-app"
+			],
+			[
+				"uploa",
+				"uploadComplete"
 			],
 			[
 				"uplo",
@@ -324,42 +340,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/templates/point-me/login.hbs",
+			"file": "app/routes/point-me.js",
 			"settings":
 			{
-				"buffer_size": 1018,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/point-me/login.js",
-			"settings":
-			{
-				"buffer_size": 2514,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/templates/point-me.hbs",
-			"settings":
-			{
-				"buffer_size": 2249,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/styles/IPF.css",
-			"settings":
-			{
-				"buffer_size": 316,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/point-me.js",
-			"settings":
-			{
-				"buffer_size": 900,
+				"buffer_size": 673,
 				"line_ending": "Windows"
 			}
 		},
@@ -367,40 +351,47 @@
 			"file": "app/routes/point-me/my-points.js",
 			"settings":
 			{
-				"buffer_size": 497,
+				"buffer_size": 824,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/templates/point-me/my-points.hbs",
+			"file": "app/templates/point-me.hbs",
 			"settings":
 			{
-				"buffer_size": 736,
+				"buffer_size": 2401,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/controllers/point-me/point.js",
+			"file": "app/controllers/point-me.js",
 			"settings":
 			{
-				"buffer_size": 295,
-				"line_ending": "Windows",
-				"name": "point.js"
-			}
-		},
-		{
-			"file": "app/router.js",
-			"settings":
-			{
-				"buffer_size": 376,
+				"buffer_size": 1208,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/index.html",
+			"file": "app/controllers/point-me/share.js",
 			"settings":
 			{
-				"buffer_size": 685,
+				"buffer_size": 2262,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/point-me/login.js",
+			"settings":
+			{
+				"buffer_size": 3467,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/services/point-lister-service.js",
+			"settings":
+			{
+				"buffer_size": 556,
 				"line_ending": "Windows"
 			}
 		}
@@ -412,14 +403,10 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 35.0,
-		"last_filter": "",
+		"height": 150.0,
+		"last_filter": "install",
 		"selected_items":
 		[
-			[
-				"instal",
-				"Package Control: Install Package"
-			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -457,18 +444,15 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 512.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
-			"ipconfig",
-			"bash",
-			"sh",
-			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
-			" import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"ember s",
+			"ls",
 			"cd",
 			"cds",
 			"ls",
@@ -499,56 +483,72 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Promethean/Internet-Programming-Final/app",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers/point-me",
-		"/C/Users/Promethean/Internet-Programming-Final/app/models",
-		"/C/Users/Promethean/Internet-Programming-Final/app/routes",
-		"/C/Users/Promethean/Internet-Programming-Final/app/routes/point-me",
-		"/C/Users/Promethean/Internet-Programming-Final/app/services",
-		"/C/Users/Promethean/Internet-Programming-Final/app/styles",
-		"/C/Users/Promethean/Internet-Programming-Final/app/templates",
-		"/C/Users/Promethean/Internet-Programming-Final/app/templates/point-me"
+		"/D/Node/Internet-Programming-Final/app",
+		"/D/Node/Internet-Programming-Final/app/assets",
+		"/D/Node/Internet-Programming-Final/app/controllers",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me",
+		"/D/Node/Internet-Programming-Final/app/models",
+		"/D/Node/Internet-Programming-Final/app/routes",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me",
+		"/D/Node/Internet-Programming-Final/app/templates",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me"
 	],
 	"file_history":
 	[
-		"/C/Users/Promethean/Internet-Programming-Final/app/templates/point-me.hbs",
-		"/C/Users/Promethean/Internet-Programming-Final/app/templates/point-me/share.hbs",
-		"/C/Users/Promethean/Internet-Programming-Final/app/routes/point-me/login.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers/point-me/share.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/styles/IPF.css",
-		"/C/Users/Promethean/Internet-Programming-Final/app/routes/point-me/share.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/app.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers/point-me.js",
-		"/C/Users/Promethean/Internet-Programming-Final/Brocfile.js",
-		"/C/Users/Promethean/Internet-Programming-Final/package.json",
-		"/C/Users/Promethean/Internet-Programming-Final/app/services/point-lister-service.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/models/myPoints.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/services/authentication-service.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/routes/point-me/my-points.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/routes/point-me.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers/point-me/login.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/templates/point-me/login.hbs",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers/point-me/my-points.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/index.html",
-		"/C/Users/Promethean/Internet-Programming-Final/app/services/image-uploader-service.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/router.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/services/point-listener-service.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/assets/internet-programming-final.css",
-		"/C/Users/Promethean/Internet-Programming-Final/app/templates/application.hbs",
-		"/C/Users/Promethean/Internet-Programming-Final/app/services/image-uploader.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/models/application.js",
-		"/C/Users/Promethean/Internet-Programming-Final/app/controllers/application.js",
-		"/C/Users/Promethean/Internet-Programming-Final/config/environment.js",
-		"/C/Users/Promethean/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/login.js",
+		"/D/Node/Internet-Programming-Final/app/router.js",
+		"/D/Node/Internet-Programming-Final/app/models/share.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/login.hbs",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/share.hbs",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/my-points.hbs",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/my-points.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me.hbs",
+		"/D/Node/Internet-Programming-Final/Brocfile.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/login.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/share.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/my-points.js",
+		"/D/Node/Internet-Programming-Final/app/services/authentication-service.js",
+		"/D/Node/Internet-Programming-Final/app/models/myPoints.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/myPoints.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/myPoints.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/myPoints.hbs",
+		"/D/wamp/www/group/user.php",
+		"/D/wamp/www/group/PointMe.php",
+		"/D/wamp/www/group/point_me.php",
+		"/D/wamp/www/group/auth.php",
+		"/D/wamp/www/group/rb.php",
+		"/D/Node/how-to-sane/client/app/services/geo-google.js",
+		"/D/Node/how-to-sane/client/app/pods/login/route.js",
+		"/D/Node/how-to-sane/client/app/pods/login/template.hbs",
+		"/D/Node/how-to-sane/client/app/mixins/draggable.js",
+		"/D/Node/how-to-sane/client/app/mixins/destroy-new-model.js",
+		"/D/Node/how-to-sane/client/app/mixins/modal-actions.js",
+		"/D/Node/how-to-sane/client/app/initializers/file-uploader-service.js",
+		"/D/Node/how-to-sane/client/app/adapters/application.js",
+		"/D/Node/how-to-sane/client/app/models/event.js",
+		"/D/Node/how-to-sane/client/app/models/post.js",
+		"/D/Node/how-to-sane/client/app/models/user.js",
+		"/D/Node/Internet-Programming-Final/app/app.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/share.js",
+		"/D/Node/Internet-Programming-Final/app/services/image-uploader-service.js",
+		"/D/Node/how-to-sane/client/app/pods/components/bootstrap-fileinput/component.js",
+		"/D/Node/how-to-sane/client/app/pods/components/bootstrap-fileinput/template.hbs",
+		"/D/Node/how-to-sane/client/app/pods/register/template.hbs",
+		"/D/Node/how-to-sane/server/api/controllers/UserController.js",
+		"/D/Node/how-to-sane/server/api/controllers/AuthController.js",
+		"/D/Node/how-to-sane/client/app/templates/application.hbs",
+		"/D/Node/Internet-Programming-Final/app/authenticators/phpAuth.js",
+		"/D/Node/Internet-Programming-Final/app/index.html",
+		"/D/Node/Internet-Programming-Final/app/models/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/templates/application.hbs",
+		"/D/Node/Internet-Programming-Final/app/routes/application.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/application.js",
 		"/D/Node/Internet-Programming-Final/app/assets/internet-programming-final.css",
 		"/D/Node/Internet-Programming-Final/config/environment.js",
 		"/D/Node/Internet-Programming-Final/package.json",
 		"/D/Node/Internet-Programming-Final/app/utilities/image-converter.js",
-		"/D/Node/Internet-Programming-Final/app/templates/application.hbs",
-		"/D/Node/Internet-Programming-Final/app/app.js",
-		"/D/Node/Internet-Programming-Final/app/index.html",
-		"/D/Node/Internet-Programming-Final/app/router.js",
 		"/D/wamp/www/HomeViewController.js",
 		"/D/wamp/www/HomeViewModel.js",
 		"/D/wamp/www/assign6/MEEQSController.php",
@@ -596,14 +596,16 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
 		"height": 90.0,
 		"where_history":
 		[
-			"C:\\Users\\Promethean\\Internet-Programming-Final\\app",
+			"D:\\Node\\Internet-Programming-Final",
+			"D:\\Node\\Semantic-UI-Docs",
+			"D:\\Node\\how-to-sane",
 			"D:\\wamp\\www"
 		]
 	},
@@ -612,10 +614,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			" {{loading}}",
 			"data",
-			"lister",
-			"data.",
+			"mouseover",
+			"menuMouseover",
+			"ui black big launch right attached fixed button",
+			"pushable",
+			"loading",
 			"\"'*'\"",
 			"contentSecurityPolicyHeader ",
 			"debugger",
@@ -737,7 +741,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"",
 			"\"'self' *\"",
 			"th",
 			"clear",
@@ -800,26 +803,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/templates/point-me/login.hbs",
+					"file": "app/routes/point-me.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1018,
+						"buffer_size": 673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								560,
-								560
+								642,
+								642
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -830,107 +831,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/point-me/login.js",
+					"file": "app/routes/point-me/my-points.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2514,
+						"buffer_size": 824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1866,
-								1866
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/templates/point-me.hbs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2249,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1002,
-								1002
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/styles/IPF.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 316,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								59,
-								59
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/point-me.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 900,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								828,
-								828
+								172,
+								172
 							]
 						],
 						"settings":
@@ -942,24 +855,148 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/routes/point-me/my-points.js",
+					"buffer": 2,
+					"file": "app/templates/point-me.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 497,
+						"buffer_size": 2401,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								421,
+								421
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/point-me.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1208,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								225,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "app/controllers/point-me/share.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1636,
+								1636
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/point-me/login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1612,
+								1612
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 136.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/services/point-lister-service.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
 							]
 						],
 						"settings":
@@ -972,121 +1009,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/templates/point-me/my-points.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								33,
-								33
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/controllers/point-me/point.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								174,
-								174
-							]
-						],
-						"settings":
-						{
-							"auto_name": "point.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 376,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								197,
-								197
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								484,
-								484
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1109,11 +1031,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1135,7 +1064,7 @@
 	"project": "IPF.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1144,14 +1073,6 @@
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"login.js",
-				"routes\\point-me\\login.js"
-			],
-			[
-				"point-me.js",
-				"routes\\point-me.js"
-			]
 		],
 		"width": 0.0
 	},
@@ -1173,11 +1094,11 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
-	"show_minimap": false,
+	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
