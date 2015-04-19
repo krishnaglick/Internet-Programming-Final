@@ -45,6 +45,15 @@ var shareController = Ember.Controller.extend({
 					success: (data) => {
 						controller.set('model', controller.store.createRecord('share', {}));
 						controller.set('haveImage', '');
+						this.get('session.showMessage')('positive', 'Point Sent', 'Your Point-Me was sent!');
+					},
+					error: (data) => {
+						if(data.code === 401) {
+							this.get('session.showMessage')('negative', 'Session Expired', 'Your session has expired, please login again!');
+						}
+						if(data.code === 500) {
+							this.get('session.showMessage')('negative', 'System Error', 'There was a system error, please try again.');
+						}
 					}
 				});
 			}

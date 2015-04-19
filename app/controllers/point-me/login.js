@@ -25,10 +25,17 @@ var loginController = Ember.Controller.extend({
                 if(authXHR) {
                 	authXHR.success((data) => {
                 		this.get('authenticationService').createSession(this, data);
-                        this.set('session.message', 'Welcome to Point-Me!');
-                        this.set('session.messageTitle', 'Logged In');
-                        Ember.$('#errorMessage').slideDown();
+                        this.get('session.showMessage')('positive', 'Logged In', 'Welcome to Point-Me!');
+                        Ember.$('#menuNav#share').addClass('active teal');
                 	});
+                    authXHR.error((data) => {
+                        if(data.status === 404) {
+                            this.get('session.showMessage')('negative', 'Invalid Credentials', 'Incorrect username or password');
+                        }
+                        if(data.status === 500) {
+                            this.get('session.showMessage')('negative', 'System Error', 'There was a system error, please try again.');
+                        }
+                    });
                 	authXHR.complete(() => {
                 		this.set('loading', '');
                 	});
@@ -42,10 +49,17 @@ var loginController = Ember.Controller.extend({
                 if(authXHR) {
                 	authXHR.success((data) => {
                 		this.get('authenticationService').createSession(this, data);
-                        this.set('session.message', 'Welcome to Point-Me!');
-                        this.set('session.messageTitle', 'Account Created');
-                        Ember.$('#errorMessage').slideDown();
+                        this.get('session.showMessage')('positive', 'Account Created', 'Welcome to Point-Me!');
+                        Ember.$('#menuNav#share').addClass('active teal');
                 	});
+                    authXHR.error((data) => {
+                        if(data.status === 409) {
+                            this.get('session.showMessage')('negative', 'Duplicate Account', 'An account already exists with that username, please choose another!');
+                        }
+                        if(data.status === 500) {
+                            this.get('session.showMessage')('negative', 'System Error', 'There was a system error, please try again.');
+                        }
+                    });
                 	authXHR.complete(() => {
                 		this.set('loading', '');
                 	});
