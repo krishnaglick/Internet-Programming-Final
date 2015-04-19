@@ -21,5 +21,6 @@ export default Ember.Route.extend({
 		});
 		controller.set('session.appTitle', 'My Points');
 		controller.set('model', model);
+		controller.set('session.grid', 'sixteen wide mobile twelve wide tablet computer column');
 	}
 });
