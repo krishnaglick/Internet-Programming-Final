@@ -34,7 +34,6 @@ var pointMeController = Ember.Controller.extend({
 			Ember.$('#errorMessage').slideUp();
 		},
 		removeActiveMenuItems: function() {
-			Ember.$('#sidebar > div.item').removeClass('active teal');
 			this.set('session.menu.shareActive', '');
 			this.set('session.menu.myPointsActive', '');
 		}
