@@ -9,7 +9,13 @@ export default Ember.Route.extend({
 	setupController: function(controller, model) {
 		var getPointsXHR = controller.get('pointLister').getMyPoints(controller.get('session.token'));
 		getPointsXHR.success((data) => {
-			controller.set('myPoints', data);
+			controller.set('myPoints', Ember.$.map(data, function(point) {
+				if(point.userComment && point.location) {
+					point.userComment = point.userComment.substr(0,120);
+					point.location = point.location.substr(0,120);
+				}
+				return point;
+			}));
 		});
 		getPointsXHR.error((data) => {
 			if(data.code === 401) {
