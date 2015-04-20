@@ -40,7 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = 'http://cop4813.ccec.unf.edu/~group4/app/';
   }
 
   return ENV;

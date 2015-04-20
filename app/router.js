@@ -4,7 +4,7 @@ import config from './config/environment';
 var Router = Ember.Router.extend({
 	location: config.locationType,
 	afterModel: () => {
-		this.transitionTo('point-me.login');
+		this.transitionTo('point-me');
 	}
 });
 

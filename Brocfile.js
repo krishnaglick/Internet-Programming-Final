@@ -4,7 +4,6 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
 	'babel': {
-		compileModules: true,
 		stage: 2
 	}
 });
