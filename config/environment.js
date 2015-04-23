@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = 'http://cop4813.ccec.unf.edu/~group4/app/';
+    ENV.baseURL = 'https://point-me.herokuapp.com/';
   }
 
   return ENV;
