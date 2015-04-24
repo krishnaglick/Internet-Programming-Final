@@ -33,7 +33,8 @@
     "ember-data-route": "0.0.4",
     "ember-document-title": "1.1.10",
     "ember-export-application-global": "^1.0.2",
-    "semantic-ui-ember": "0.0.1-rc.8"
+    "semantic-ui-ember": "0.0.1-rc.8",
+    "ember": "~0.9"
   },
   "dependencies": {
     "broccoli-asset-rev": "^2.0.2",
