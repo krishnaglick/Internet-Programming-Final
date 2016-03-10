@@ -1,0 +1,57 @@
+<section id="point-me-app">
+    {{document-title title=appName}}
+    {{document-title title=this.session.appTitle}}
+    <div id="sidebar" class="ui green left inline vertical sidebar uncover menu">
+        <div class="item">
+            <h2 class="ui dark blue header">
+                <i class="ui dark blue circular marker icon"></i>
+                {{appName}}
+            </h2>
+        </div>
+        {{#if session.isAuthenticated}}
+        <div class="ui header item">
+            {{session.username}}
+        </div>
+        <div class="{{session.menu.shareActive}} link item" {{action 'share'}}>
+            Share
+        </div>
+
+        <div class="{{session.menu.myPointsActive}} link item" {{action 'myPoints'}}>
+            See My Points
+        </div>
+
+        <div class="link item" {{action 'logout'}}>
+            Logout
+        </div>
+        {{/if}}
+    </div>
+    <div id="content" class="no-scrollbar">
+        <div id="contentGrid" class="ui centered stackable page grid">
+            <div class="row">
+                <div class="{{session.grid}}">
+                    <div id="errorMessage" class="hidden ui floating message {{session.messageType}}">
+                        <i class="close icon" {{action 'clearError'}}></i>
+                        <div class="header">{{session.messageTitle}}</div>
+                        <p>{{session.message}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="{{session.grid}}">
+                    <div class="ui raised teal segment have-bottom">
+                        <div class="ui top attached teal label no-radius">
+                            <span {{action 'toggleSidebar'}}>
+                                <i class="content link icon"></i>
+                                <a>Menu</a>
+                            </span>
+                            <div class="ui top right attached teal label">
+                            {{this.session.appTitle}}
+                            </div>
+                        </div>
+                        {{outlet}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

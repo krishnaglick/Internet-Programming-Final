@@ -1,0 +1,29 @@
+.pushable {
+	overflow-x: hidden;
+}
+.hidden {
+	display: none;
+}
+
+.no-scrollbar {
+	overflow-y: hidden;
+}
+
+.no-resize {
+	resize: none !important;
+}
+
+.no-radius {
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.have-bottom {
+	margin-bottom: 2px !important;
+}
+
+/*@media (max-width: 768px) {
+	#contentGrid {
+		margin-top: 10%;
+	}
+}*/

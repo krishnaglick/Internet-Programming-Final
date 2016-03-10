@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"point-me",
+				"point-me-app"
+			],
+			[
+				"remove",
+				"removeActiveMenuItems"
+			],
+			[
+				"auth",
+				"authXHR"
+			],
+			[
+				"imgur",
+				"imgurDeleteHash"
+			],
+			[
+				"point",
+				"point-me-app"
+			],
+			[
+				"uploa",
+				"uploadComplete"
+			],
+			[
+				"uplo",
+				"uploadAnImage"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
 				"image",
 				"imageUploader"
 			],
@@ -312,67 +344,98 @@
 	"buffers":
 	[
 		{
-			"file": "app/app.js",
+			"file": "app/routes/point-me.js",
 			"settings":
 			{
-				"buffer_size": 414,
-				"line_ending": "Unix"
+				"buffer_size": 707,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/index.html",
+			"file": "app/templates/point-me/my-points.hbs",
 			"settings":
 			{
-				"buffer_size": 677,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/templates/application.hbs",
-			"settings":
-			{
-				"buffer_size": 1354,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/router.js",
-			"settings":
-			{
-				"buffer_size": 186,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/services/image-uploader.js",
-			"settings":
-			{
-				"buffer_size": 380,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/application.js",
-			"settings":
-			{
-				"buffer_size": 308,
-				"line_ending": "Windows",
-				"name": "export default Ember.Controller.extend({"
+				"buffer_size": 708,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "config/environment.js",
 			"settings":
 			{
-				"buffer_size": 1720,
-				"line_ending": "Unix"
+				"buffer_size": 1153,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/assets/internet-programming-final.css",
+			"file": "app/routes/point-me/my-points.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1133,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes/point-me/share.js",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/point-me.hbs",
+			"settings":
+			{
+				"buffer_size": 2206,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/point-me.js",
+			"settings":
+			{
+				"buffer_size": 1280,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/point-me/share.js",
+			"settings":
+			{
+				"buffer_size": 2276,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/point-me/login.js",
+			"settings":
+			{
+				"buffer_size": 3471,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes/point-me/login.js",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/services/point-lister-service.js",
+			"settings":
+			{
+				"buffer_size": 1906,
 				"line_ending": "Windows"
 			}
 		}
@@ -425,13 +488,15 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 512.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
+			"ember s",
+			"ls",
 			"cd",
 			"cds",
 			"ls",
@@ -465,17 +530,69 @@
 		"/D/Node/Internet-Programming-Final/app",
 		"/D/Node/Internet-Programming-Final/app/assets",
 		"/D/Node/Internet-Programming-Final/app/controllers",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me",
+		"/D/Node/Internet-Programming-Final/app/models",
 		"/D/Node/Internet-Programming-Final/app/routes",
-		"/D/Node/Internet-Programming-Final/app/services",
-		"/D/Node/Internet-Programming-Final/app/templates"
+		"/D/Node/Internet-Programming-Final/app/routes/point-me",
+		"/D/Node/Internet-Programming-Final/app/templates",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me"
 	],
 	"file_history":
 	[
-		"/D/Node/Internet-Programming-Final/app/utilities/image-converter.js",
-		"/D/Node/Internet-Programming-Final/app/templates/application.hbs",
-		"/D/Node/Internet-Programming-Final/app/app.js",
-		"/D/Node/Internet-Programming-Final/app/index.html",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/login.js",
 		"/D/Node/Internet-Programming-Final/app/router.js",
+		"/D/Node/Internet-Programming-Final/app/models/share.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/login.hbs",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/share.hbs",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/my-points.hbs",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/my-points.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me.hbs",
+		"/D/Node/Internet-Programming-Final/Brocfile.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/login.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/share.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/my-points.js",
+		"/D/Node/Internet-Programming-Final/app/services/authentication-service.js",
+		"/D/Node/Internet-Programming-Final/app/models/myPoints.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/myPoints.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me/myPoints.js",
+		"/D/Node/Internet-Programming-Final/app/templates/point-me/myPoints.hbs",
+		"/D/wamp/www/group/user.php",
+		"/D/wamp/www/group/PointMe.php",
+		"/D/wamp/www/group/point_me.php",
+		"/D/wamp/www/group/auth.php",
+		"/D/wamp/www/group/rb.php",
+		"/D/Node/how-to-sane/client/app/services/geo-google.js",
+		"/D/Node/how-to-sane/client/app/pods/login/route.js",
+		"/D/Node/how-to-sane/client/app/pods/login/template.hbs",
+		"/D/Node/how-to-sane/client/app/mixins/draggable.js",
+		"/D/Node/how-to-sane/client/app/mixins/destroy-new-model.js",
+		"/D/Node/how-to-sane/client/app/mixins/modal-actions.js",
+		"/D/Node/how-to-sane/client/app/initializers/file-uploader-service.js",
+		"/D/Node/how-to-sane/client/app/adapters/application.js",
+		"/D/Node/how-to-sane/client/app/models/event.js",
+		"/D/Node/how-to-sane/client/app/models/post.js",
+		"/D/Node/how-to-sane/client/app/models/user.js",
+		"/D/Node/Internet-Programming-Final/app/app.js",
+		"/D/Node/Internet-Programming-Final/app/routes/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/point-me/share.js",
+		"/D/Node/Internet-Programming-Final/app/services/image-uploader-service.js",
+		"/D/Node/how-to-sane/client/app/pods/components/bootstrap-fileinput/component.js",
+		"/D/Node/how-to-sane/client/app/pods/components/bootstrap-fileinput/template.hbs",
+		"/D/Node/how-to-sane/client/app/pods/register/template.hbs",
+		"/D/Node/how-to-sane/server/api/controllers/UserController.js",
+		"/D/Node/how-to-sane/server/api/controllers/AuthController.js",
+		"/D/Node/how-to-sane/client/app/templates/application.hbs",
+		"/D/Node/Internet-Programming-Final/app/authenticators/phpAuth.js",
+		"/D/Node/Internet-Programming-Final/app/index.html",
+		"/D/Node/Internet-Programming-Final/app/models/point-me.js",
+		"/D/Node/Internet-Programming-Final/app/templates/application.hbs",
+		"/D/Node/Internet-Programming-Final/app/routes/application.js",
+		"/D/Node/Internet-Programming-Final/app/controllers/application.js",
+		"/D/Node/Internet-Programming-Final/app/assets/internet-programming-final.css",
+		"/D/Node/Internet-Programming-Final/config/environment.js",
+		"/D/Node/Internet-Programming-Final/package.json",
+		"/D/Node/Internet-Programming-Final/app/utilities/image-converter.js",
 		"/D/wamp/www/HomeViewController.js",
 		"/D/wamp/www/HomeViewModel.js",
 		"/D/wamp/www/assign6/MEEQSController.php",
@@ -530,14 +647,24 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"D:\\Node\\Internet-Programming-Final",
+			"D:\\Node\\Semantic-UI-Docs",
+			"D:\\Node\\how-to-sane",
 			"D:\\wamp\\www"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"data",
+			"mouseover",
+			"menuMouseover",
+			"ui black big launch right attached fixed button",
+			"pushable",
+			"loading",
+			"\"'*'\"",
 			"contentSecurityPolicyHeader ",
 			"debugger",
 			"this.restaurantName",
@@ -658,6 +785,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"'self' *\"",
 			"th",
 			"clear",
 			"",
@@ -719,19 +847,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/app.js",
+					"file": "app/routes/point-me.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 414,
+						"buffer_size": 707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								347,
-								347
+								676,
+								676
 							]
 						],
 						"settings":
@@ -747,54 +875,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/index.html",
+					"file": "app/templates/point-me/my-points.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 677,
+						"buffer_size": 708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								466,
-								466
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/templates/application.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1354,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1099,
-								1099
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -804,112 +903,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 186,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								137,
-								137
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/services/image-uploader.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								345,
-								345
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "app/controllers/application.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 308,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								191,
-								191
-							]
-						],
-						"settings":
-						{
-							"auto_name": "export default Ember.Controller.extend({",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 2,
 					"file": "config/environment.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1720,
+						"buffer_size": 1153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								230,
-								230
+								95,
+								95
 							]
 						],
 						"settings":
@@ -926,12 +933,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "app/assets/internet-programming-final.css",
+					"buffer": 3,
+					"file": "app/routes/point-me/my-points.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1133,
 						"regions":
 						{
 						},
@@ -944,13 +951,254 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 165.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/routes/point-me/share.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 48.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/templates/point-me.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "app/controllers/point-me.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/controllers/point-me/share.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 366.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/controllers/point-me/login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1785,
+								1785
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/routes/point-me/login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/services/point-lister-service.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1006,7 +1254,7 @@
 	"project": "IPF.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1036,7 +1284,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

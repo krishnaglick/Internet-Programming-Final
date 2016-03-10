@@ -1,0 +1,47 @@
+<form class="ui form {{loading}}">
+	<div class="field">
+		<div class="ui input">
+			{{input value=model.friendsEmail placeholder="Friend's Email" type="text"}}
+		</div>
+	</div>
+
+	<div class="field">
+		<div class="ui input">
+			{{input value=model.userEmail placeholder="My Email" type="text"}}
+		</div>
+	</div>
+
+	<div class="field">
+		<div class="ui input">
+			{{input value=model.location placeholder="Where Am I?" type="text"}}
+		</div>
+	</div>
+
+	<div class="field">
+		{{textarea value=model.comment class="no-resize" placeholder="Talk about it!" type="text"}}
+	</div>
+
+	<div class="field">
+		{{input type="file" id="uploadAnImage" isVisible=false value=haveImage accept="image/*"}}
+		{{#if model.imgurLink}}
+			<img {{bind-attr src="model.imgurLink"}} style="width: 100px; height: 100px;" />
+		{{else}}
+			{{#if haveImage}}
+		        <div class="ui compact inverted green button" {{action 'uploadImage'}}>
+		            Upload Image
+		        </div>
+		        <div class="ui compact inverted red button" {{action 'clearImage'}}>
+		            Clear Image
+		        </div>
+	        {{else}}
+		        <div class="ui compact inverted blue button" {{action 'selectImage'}}>
+		            Select Image
+		        </div>
+	        {{/if}}
+        {{/if}}
+	</div>
+
+	<div class="ui compact inverted green button {{if formValid '' 'disabled'}}" {{action 'submitPointMe'}}>
+		Point!
+	</div>
+</form>

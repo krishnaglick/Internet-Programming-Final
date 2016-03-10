@@ -1,0 +1,24 @@
+<div class="ui doubling eight cards">
+{{#each point in myPoints itemController='point-me.point'}}
+	{{#if point.model.imgurLink}}
+		<div class="ui card">
+			<div class="image">
+				<a {{bind-attr href=point.model.imgurLink}} target="_blank" class="ui small image">
+					<img {{bind-attr src="point.model.imgurLink"}} />
+				</a>
+			</div>
+			<div class="content">
+				<div class="header">
+					Location
+					<i class="link remove icon" {{action 'deletePoint'}}></i>
+				</div>
+				<div class="meta">{{point.model.location}}</div>
+			</div>
+			<div class="extra content">
+				<div class="header">Comment</div>
+				<div class="meta">{{point.model.userComment}}</div>
+			</div>
+		</div>
+	{{/if}}
+{{/each}}
+</div>
